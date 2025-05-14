@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <img src="images/icons/light_mode.svg" alt="Light Mode" id="light-mode-toggle" class="light-mode-icon">
@@ -39,9 +40,20 @@
         </div>
     </nav>
 
+    <div class="timer-container">
+      <div class="timer-widget">
+        <div class="timer-time" id="timerTime"></div>
+        <div class="timer-date">
+          <div class="timer-date-number" id="timerDate"></div>
+          <div class="timer-month" id="timerMonth"></div>
+        </div>
+      </div>
+      <div class="tick-tock-line"><span class="tick-tock-line-text">Tick-tock</span>, your next project needs me.</div>
+    </div>
+
     <div class="container">
         <div class="left-column">
-            <div class="timer"></div>
+            
             <img src="images/light_logo.svg" alt="Light Logo" class="light-logo">
             <img src="images/AngelikaWysocka_dark.jpg" alt="Angelika Wysocka" class="profile-image">
             <h1 class="name-heading">Angelika Wysocka</h1>

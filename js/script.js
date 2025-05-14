@@ -55,30 +55,29 @@
         }
       });
 
-// Timer
-      function updateTimer() {
-        const timer = document.querySelector('.timer');
-        const now = new Date();
-        
-        // Format the date and time for UK
-        const options = {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false,
-            timeZone: 'Europe/London'
-        };
-        
-        const ukTime = now.toLocaleString('en-GB', options).replace(',', '');
-        timer.textContent = ukTime;
-    }
-    
-    // Update the time immediately and then every second
-    updateTimer();
-    setInterval(updateTimer, 1000); 
+// Timer for widget layout
+function updateTimerWidget() {
+    const timerTime = document.getElementById('timerTime');
+    const timerDate = document.getElementById('timerDate');
+    const timerMonth = document.getElementById('timerMonth');
+    if (!timerTime || !timerDate || !timerMonth) return;
+
+    const now = new Date();
+    // Time (24h) with seconds
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    timerTime.textContent = `${hours}:${minutes}:${seconds}`;
+
+    // Date number
+    timerDate.textContent = now.getDate();
+
+    // Month name
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    timerMonth.textContent = months[now.getMonth()];
+}
+updateTimerWidget();
+setInterval(updateTimerWidget, 1000);
 
       
 // Scroll to top functionality
@@ -231,4 +230,70 @@ contactForm.addEventListener('submit', (e) => {
         contactForm.reset();
     }
 });
+
+// Typewriter effect for .title-item (true typing and erasing)
+function startTitleTypewriter() {
+    const titles = document.querySelectorAll('.title-item');
+    let current = 0;
+    const typingSpeed = 50; // ms per character
+    const erasingSpeed = 30; // ms per character
+    const pauseAfterTyping = 1000;
+    const pauseAfterErasing = 300;
+
+    // Hide all titles initially
+    titles.forEach(el => {
+        el.style.display = 'none';
+    });
+
+    function typeTitle(text, el, i = 0, cb) {
+        el.style.display = 'inline-block';
+        el.textContent = '';
+        el.classList.add('typing-active');
+        function typeChar() {
+            if (i <= text.length) {
+                el.textContent = text.slice(0, i);
+                setTimeout(() => typeChar(i + 1), typingSpeed);
+                i++;
+            } else {
+                setTimeout(cb, pauseAfterTyping);
+            }
+        }
+        typeChar();
+    }
+
+    function eraseTitle(el, cb) {
+        let text = el.textContent;
+        function eraseChar() {
+            if (text.length > 0) {
+                text = text.slice(0, -1);
+                el.textContent = text;
+                setTimeout(eraseChar, erasingSpeed);
+            } else {
+                el.classList.remove('typing-active');
+                el.style.display = 'none';
+                setTimeout(cb, pauseAfterErasing);
+            }
+        }
+        eraseChar();
+    }
+
+    function loop() {
+        const el = titles[current];
+        const text = el.getAttribute('data-title') || el.textContent;
+        typeTitle(text, el, 0, () => {
+            eraseTitle(el, () => {
+                current = (current + 1) % titles.length;
+                loop();
+            });
+        });
+    }
+
+    // Store original text in data-title
+    titles.forEach(el => {
+        el.setAttribute('data-title', el.textContent);
+    });
+
+    loop();
+}
+document.addEventListener('DOMContentLoaded', startTitleTypewriter);
 
