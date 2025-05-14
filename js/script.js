@@ -1,0 +1,234 @@
+      // Highlight nav icon for section in view
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function getScrollPos() {
+          return Math.max(
+            document.documentElement.scrollTop,
+            document.body.scrollTop,
+            window.scrollY
+          );
+        }
+
+        function onScroll() {
+          let currentSection = sections[0];
+          let scrollPos = getScrollPos() + 250; // adjust offset as needed
+          sections.forEach(section => {
+            if (section.offsetTop <= scrollPos) {
+              currentSection = section;
+            }
+          });
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === currentSection.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+        window.addEventListener('scroll', onScroll);
+        document.addEventListener('scroll', onScroll);
+        document.documentElement.addEventListener('scroll', onScroll);
+        document.body.addEventListener('scroll', onScroll);
+        onScroll(); // run on load
+
+        
+        // Toggle light/dark mode icon
+        const lightModeIcon = document.getElementById('light-mode-toggle');
+        const darkModeIcon = document.getElementById('dark-mode-toggle');
+        if (lightModeIcon && darkModeIcon) {
+          const profileImage = document.querySelector('.profile-image');
+          lightModeIcon.addEventListener('click', function() {
+            lightModeIcon.hidden = true;
+            darkModeIcon.hidden = false;
+            document.body.style.backgroundImage = "url('images/light_background.png')";
+            document.body.classList.add('light-mode');
+            if (profileImage) profileImage.src = 'images/AngelikaWysocka_bright.jpg';
+          });
+          darkModeIcon.addEventListener('click', function() {
+            darkModeIcon.hidden = true;
+            lightModeIcon.hidden = false;
+            document.body.style.backgroundImage = "url('images/dark_background.png')";
+            document.body.classList.remove('light-mode');
+            if (profileImage) profileImage.src = 'images/AngelikaWysocka_dark.jpg';
+          });
+        }
+      });
+
+// Timer
+      function updateTimer() {
+        const timer = document.querySelector('.timer');
+        const now = new Date();
+        
+        // Format the date and time for UK
+        const options = {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+            timeZone: 'Europe/London'
+        };
+        
+        const ukTime = now.toLocaleString('en-GB', options).replace(',', '');
+        timer.textContent = ukTime;
+    }
+    
+    // Update the time immediately and then every second
+    updateTimer();
+    setInterval(updateTimer, 1000); 
+
+      
+// Scroll to top functionality
+const scrollToTopButton = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+    // Scroll both html and body to top for maximum compatibility
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    document.body.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Modal functionality
+const modalButton = document.querySelector('.modal-button');
+const modal = document.querySelector('.modal');
+const closeButton = document.querySelector('.close-button');
+
+modalButton.addEventListener('click', () => {
+    modal.classList.add('show-modal');
+});
+
+closeButton.addEventListener('click', () => {
+    modal.classList.remove('show-modal');
+});
+
+// Close modal when clicking outside
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('show-modal');
+    }
+});
+
+// Contact Form Validation
+const contactForm = document.getElementById('contactForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
+
+function validateName(name) {
+    if (name.trim() === '') {
+        return 'Name is required';
+    }
+    if (name.length < 2) {
+        return 'Name must be at least 2 characters long';
+    }
+    return '';
+}
+
+function validateEmail(email) {
+    if (email.trim() === '') {
+        return 'Email is required';
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        return 'Please enter a valid email address';
+    }
+    return '';
+}
+
+function validateMessage(message) {
+    if (message.trim() === '') {
+        return 'Message is required';
+    }
+    if (message.length < 10) {
+        return 'Message must be at least 10 characters long';
+    }
+    return '';
+}
+
+function showError(input, errorElement, message) {
+    input.classList.add('error');
+    errorElement.textContent = message;
+}
+
+function clearError(input, errorElement) {
+    input.classList.remove('error');
+    errorElement.textContent = '';
+}
+
+// Real-time validation
+nameInput.addEventListener('input', () => {
+    const error = validateName(nameInput.value);
+    if (error) {
+        showError(nameInput, nameError, error);
+    } else {
+        clearError(nameInput, nameError);
+    }
+});
+
+emailInput.addEventListener('input', () => {
+    const error = validateEmail(emailInput.value);
+    if (error) {
+        showError(emailInput, emailError, error);
+    } else {
+        clearError(emailInput, emailError);
+    }
+});
+
+messageInput.addEventListener('input', () => {
+    const error = validateMessage(messageInput.value);
+    if (error) {
+        showError(messageInput, messageError, error);
+    } else {
+        clearError(messageInput, messageError);
+    }
+});
+
+// Form submission
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const nameError = validateName(nameInput.value);
+    const emailError = validateEmail(emailInput.value);
+    const messageError = validateMessage(messageInput.value);
+    
+    let hasError = false;
+    
+    if (nameError) {
+        showError(nameInput, nameError, nameError);
+        hasError = true;
+    }
+    
+    if (emailError) {
+        showError(emailInput, emailError, emailError);
+        hasError = true;
+    }
+    
+    if (messageError) {
+        showError(messageInput, messageError, messageError);
+        hasError = true;
+    }
+    
+    if (!hasError) {
+        contactForm.reset();
+    }
+});
+

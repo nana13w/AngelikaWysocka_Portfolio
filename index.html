@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelika Wysocka - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="images/icons/light_mode.svg" alt="Light Mode" id="light-mode-toggle" class="light-mode-icon">
+    <img src="images/icons/dark_mode.svg" alt="Dark Mode" id="dark-mode-toggle" class="dark-mode-icon" hidden>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid nav-container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="bi bi-house-fill"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="bi bi-person-fill"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills"><i class="bi bi-code-square"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects"><i class="bi bi-folder-fill"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials"><i class="bi bi-chat-quote-fill"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-envelope-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="timer"></div>
+            <img src="images/light_logo.svg" alt="Light Logo" class="light-logo">
+            <img src="images/AngelikaWysocka_dark.jpg" alt="Angelika Wysocka" class="profile-image">
+            <h1 class="name-heading">Angelika Wysocka</h1>
+            <h2 class="subtitle">Product Designer & Developer</h2>
+            <h2 class="subtitle">Wishaw, Scotland, UK</h2>
+            <button class="talk-button">Let's Talk</button>
+        </div>
+        <div class="right-column">
+            <section id="home">
+                <h1 class="section-heading">
+                    <span class="hello-line">Hello <img src="images/icons/hand.svg" alt="waving hand" class="wave"></span>
+                    <span class="im-line">I'm <img src="images/icons/name.svg" alt="name" class="name">.</span>
+                    <br class="im-line-break">
+                    <span class="im-line-two">I'm <span class="letter">a</span> 
+                    <span class="titles">
+                        <span class="title-item">Web Developer</span>
+                        <span class="title-item">Front End Developer</span>
+                        <span class="title-item">Back End Developer</span>
+                        <span class="title-item">Problem Solver</span>
+                    </span>
+                </h1>
+                <p class="intro-text">I'm passionate about building modern, user-friendly websites that bring ideas to life. I'm passionate about turning ideas into websites that are both beautiful and functional.</p>
+                <div class="three-squares-container">
+                    <div class="square">
+                        <h1>+3</h1>
+                        <p class="square-label">years of<br>experience</p>
+                    </div>
+                    <div class="square">
+                        <h1>+5</h1>
+                        <p class="square-label">projects<br>completed</p>
+                    </div>
+                    <div class="square">
+                        <h1>+4k</h1>
+                        <p class="square-label">hours of<br>coding</p>
+                    </div>
+                </div>
+                <button class="talk-button-section">Let's Talk</button>
+            </section>
+
+            <section id="about">
+                <h1 class="section-heading">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            </section>
+
+            <section id="skills">
+                <h1 class="section-heading">Skills</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            </section>
+
+            <section id="projects">
+                <h1 class="section-heading">Projects</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            </section>
+
+            <section id="testimonials">
+                <h1 class="section-heading">Testimonials</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            </section>
+
+            <section id="contact">
+                <h1 class="section-heading">Let's Talk</h1>
+                <form id="contactForm" class="contact-form"   action="https://formspree.io/f/xanoaynb"
+                method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+    </button>
+
+    <button class="talk-button modal-button">
+        <img src="images/icons/talk.svg" alt="Let's Talk" class="talk-icon" style="width: 24px; height: 24px;">
+    </button>
+
+    <div class="modal">
+        <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <div></div>
+                <h1 class="section-heading">Let's Talk</h1>
+                <button class="close-button">&times;</button>
+            </div>
+
+
+            <form id="contactForm" class="contact-form"   action="https://formspree.io/f/xanoaynb"
+            method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
