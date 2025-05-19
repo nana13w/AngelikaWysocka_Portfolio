@@ -297,3 +297,33 @@ function startTitleTypewriter() {
 }
 document.addEventListener('DOMContentLoaded', startTitleTypewriter);
 
+// Position timer-container above left-column
+function positionTimerContainer() {
+  const timer = document.querySelector('.timer-container');
+  const leftCol = document.querySelector('.left-column');
+  if (timer && leftCol) {
+    // Only position on screens wider than 764px
+    if (window.innerWidth > 764) {
+      const rect = leftCol.getBoundingClientRect();
+      timer.style.left = rect.left + 'px';
+      timer.style.width = rect.width + 'px';
+      timer.style.transform = 'none';
+      timer.style.position = 'fixed';
+    } else {
+      // Let CSS handle it on small screens
+      timer.style.left = '';
+      timer.style.width = '';
+      timer.style.position = '';
+    }
+  }
+}
+window.addEventListener('DOMContentLoaded', positionTimerContainer);
+window.addEventListener('resize', positionTimerContainer);
+
+// Dynamically update on left-column resize
+const leftCol = document.querySelector('.left-column');
+if (leftCol && 'ResizeObserver' in window) {
+  const ro = new ResizeObserver(positionTimerContainer);
+  ro.observe(leftCol);
+}
+
