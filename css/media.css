@@ -1,0 +1,764 @@
+
+
+@media (max-width: 1088px) {
+
+    .timer-widget {
+        padding-left: 14px !important;
+    }
+
+    .timer-time {
+        padding: 0px !important;
+    }
+
+    .timer-date {
+        max-width: 13px !important;
+        padding: 0px !important;
+    }
+}
+
+@media (max-width: 1074px) {
+
+    .navbar {
+        width: 250px;
+        height: 60px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        padding: 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.2rem 0.4rem !important;
+
+        min-width: 30px;
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-link i {
+        font-size: 1.3em;
+        display: block;
+    }
+
+    /* Always show navbar-collapse on small screens */
+    .navbar-collapse,
+    .collapse {
+        display: flex !important;
+        flex-basis: auto !important;
+        height: auto !important;
+        opacity: 1 !important;
+    }
+
+    /* Optionally hide toggler if you don't want hamburger */
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .section-heading {
+        font-size: 3.8rem;
+    }
+
+    .name {
+        width: 240px;
+    }
+
+    .im-line-two {
+        font-size: 2.3rem !important;
+    }
+
+    .title-item {
+        font-size: 2.3rem !important;
+    }
+
+    .three-squares-container {
+        gap: 15px;
+        width: 50%;
+    }
+
+    .square h1 {
+        font-size: 3.7rem;
+    }
+
+}
+
+@media (max-width: 1023px) {
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 1074px) and (min-width: 990px) {
+    .nav-link {
+        padding: 0 !important;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 976px) {
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.75rem !important;
+    }
+}
+
+@media (max-width: 970px) {
+
+    .section-heading {
+        font-size: 3.4rem;
+    }
+
+    .name {
+        width: 200px;
+    }
+}
+
+@media (max-width: 953px) {
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (max-width: 878px) {
+
+    .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .name {
+        width: 150px;
+    }
+
+    .im-line-two {
+        font-size: 1.8rem !important;
+    }
+
+    .title-item {
+        font-size: 1.8rem !important;
+    }
+
+}
+
+@media (max-width: 764px) {
+
+    .container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .left-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .timer {
+        position: fixed;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .left-column {
+        position: static;
+        width: 90%;
+        max-width: 90%;
+        margin: auto;
+        min-height: auto;
+    }
+
+    .profile-image {
+        width: 95%;
+    }
+
+    .talk-button {
+        position: relative;
+        bottom: auto;
+        margin: 50px auto 20px;
+    }
+
+    .right-column {
+        width: 100%;
+        margin-top: 0;
+        padding: 20px 0;
+    }
+
+    .section-heading {
+        width: 90%;
+        font-size: 3.6rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro-text {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .three-squares-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .talk-button-section {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        padding-bottom: 70px;
+    }
+
+    .modal-button {
+        position: fixed !important;
+        bottom: 30px !important;
+        right: 30px !important;
+        z-index: 1000;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .modal-button .talk-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .modal {
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: fixed !important;
+    }
+
+    .modal-content {
+        margin-bottom: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .timer-container {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin-top: 105px !important;
+        margin-bottom: 25px !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        z-index: 1000 !important;
+        padding-left: 0 !important;
+        justify-content: center !important;
+        width: 90% !important;
+    }
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 1rem !important;
+        width: 188px !important;
+    }
+
+    .skill-box {
+        width: 181px !important;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .skill-name {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 748px) {
+
+    .section-heading {
+        font-size: 3.4rem;
+    }
+
+    .name {
+        width: 280px;
+    }
+}
+
+@media (max-width: 708px) {
+
+    .section-heading {
+        font-size: 3.2rem;
+    }
+
+    .name {
+        width: 250px;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .section-heading {
+        font-size: 3rem;
+    }
+
+    .name {
+        width: 230px;
+    }
+}
+
+@media (max-width: 622px) {
+
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .name {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .testimonials-container {
+        padding: 15px;
+    }
+
+    .testimonial-nav {
+        top: 15px;
+        right: 15px;
+    }
+
+    .testimonial-profile {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-author h3 {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-content {
+        padding: 0 15px 15px;
+    }
+}
+
+
+
+@media (max-width: 574px) {
+
+    .section-heading {
+        font-size: 2.6rem;
+    }
+
+    .name {
+        width: 180px;
+    }
+}
+
+@media (max-width: 538px) {
+
+    .section-heading {
+        font-size: 2.2rem;
+    }
+
+    .name {
+        width: 160px;
+    }
+}
+
+@media (max-width: 502px) {
+
+    .section-heading {
+        font-size: 1.6rem;
+    }
+
+    .name {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-heading {
+        font-size: 1.3rem;
+    }
+
+    .name {
+        width: 100px;
+    }
+
+    .titles {
+        min-width: 100px;
+        width: 100%;
+        max-width: 140px;
+    }
+
+    .im-line-two {
+        font-size: 1.6rem !important;
+    }
+
+    .title-item {
+        font-size: 1.6rem !important;
+    }
+
+    @keyframes typing {
+
+        0%,
+        5% {
+            opacity: 0;
+            width: 0;
+        }
+
+        10%,
+        20% {
+            opacity: 1;
+            width: 70%;
+        }
+
+        25%,
+        30% {
+            opacity: 1;
+            width: 70%;
+        }
+
+        35%,
+        100% {
+            opacity: 0;
+            width: 0;
+        }
+    }
+
+    .right-column {
+        margin-top: 0;
+    }
+
+    .profile-image {
+        width: 80%;
+    }
+
+    .section-heading {
+        font-size: 3.6rem;
+        text-align: center;
+    }
+
+    .name {
+        width: 220px;
+    }
+
+    .im-line {
+        margin-bottom: 0;
+    }
+
+    .im-line-two {
+        display: inline-block;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 2.2rem !important;
+        margin-top: 0;
+    }
+
+    .im-line-break {
+        display: none !important;
+    }
+
+    .intro-text {
+        width: 100%;
+    }
+
+    .three-squares-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .square {
+        min-width: 95px;
+        flex: 0 0 auto;
+        padding-left: 0;
+    }
+
+    .square h1 {
+        font-size: 3rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .square-label {
+        font-size: 1rem;
+    }
+
+    .hello-line,
+    .im-line,
+    .im-line-two,
+    .iam-line {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .iam-line {
+        white-space: normal;
+    }
+
+    .iam-line .letter,
+    .iam-line .titles {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 454px) {
+    .timer {
+        font-size: 1.1rem;
+        white-space: nowrap;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .section-heading {
+        font-size: 3.3rem;
+    }
+
+    .name {
+        width: 180px;
+    }
+
+    .im-line-two {
+        font-size: 1.3rem !important;
+    }
+
+    .title-item {
+        font-size: 1.3rem !important;
+    }
+
+    .square {
+        min-width: 95px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .skill-box {
+        width: 90% !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+
+@media (max-width: 384px) {
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.9rem !important;
+        width: 130px !important;
+    }
+
+    .nav-container {
+        padding: 0 !important;
+    }
+
+    .navbar {
+        width: 200px;
+    }
+
+    .nav-link {
+        width: 80%;
+        padding: 0 !important;
+    }
+
+
+    .nav-link i {
+        font-size: 1.5rem;
+        padding: 0 !important;
+    }
+
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .name {
+        width: 180px;
+    }
+
+    .im-line-two {
+        font-size: 1.3rem !important;
+    }
+
+    .title-item {
+        font-size: 1.3rem !important;
+    }
+
+    .square {
+        min-width: 75px;
+    }
+
+    .square h1 {
+        font-size: 2.4rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .square-label {
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .light-mode-icon,
+    .dark-mode-icon {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .name {
+        width: 160px;
+    }
+
+    .im-line-two {
+        font-size: 1.2rem !important;
+    }
+
+    .title-item {
+        font-size: 1.4rem !important;
+    }
+
+    .square {
+        min-width: 65px;
+    }
+
+    .square h1 {
+        font-size: 2rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .square-label {
+        font-size: 0.7rem;
+    }
+
+    .talk-button {
+        padding: 12px 40px;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.7rem !important;
+        width: 100px !important;
+    }
+
+    .timer-container {
+        max-width: 220px !important;
+        padding: 5px !important;
+        max-height: 50px !important;
+        margin-top: 90px !important;
+        margin-left: 10px !important;
+    }
+
+    .timer-time {
+        font-size: 0.8rem !important;
+    }
+
+    .timer-date {
+        font-size: 0.7rem !important;
+    }
+}
+
+
+@supports (-webkit-touch-callout: none) {
+    .left-column {
+        background-image: none;
+    }
+
+    .modal-content {
+        background-image: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 764px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-box {
+        height: 60px;
+    }
+}

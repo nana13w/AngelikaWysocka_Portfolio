@@ -295,7 +295,6 @@ function startTitleTypewriter() {
 
     loop();
 }
-document.addEventListener('DOMContentLoaded', startTitleTypewriter);
 
 // Position timer-container above left-column
 function positionTimerContainer() {
@@ -316,14 +315,5 @@ function positionTimerContainer() {
       timer.style.position = '';
     }
   }
-}
-window.addEventListener('DOMContentLoaded', positionTimerContainer);
-window.addEventListener('resize', positionTimerContainer);
-
-// Dynamically update on left-column resize
-const leftCol = document.querySelector('.left-column');
-if (leftCol && 'ResizeObserver' in window) {
-  const ro = new ResizeObserver(positionTimerContainer);
-  ro.observe(leftCol);
 }
 
