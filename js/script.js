@@ -53,6 +53,40 @@
             if (profileImage) profileImage.src = 'images/AngelikaWysocka_dark.jpg';
           });
         }
+
+        // Testimonials Carousel
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevButton = document.querySelector('.prev-arrow');
+        const nextButton = document.querySelector('.next-arrow');
+        let currentSlide = 0;
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            // Handle circular navigation
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            slides[currentSlide].classList.add('active');
+        }
+        if (prevButton && nextButton && slides.length > 0) {
+            prevButton.addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+            });
+            nextButton.addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+            });
+            showSlide(0);
+        }
+
+        // Typewriter effect for .title-item (true typing and erasing)
+        startTitleTypewriter();
+        // Position timer-container above left-column
+        positionTimerContainer();
       });
 
 // Timer for widget layout
@@ -306,14 +340,89 @@ function positionTimerContainer() {
       const rect = leftCol.getBoundingClientRect();
       timer.style.left = rect.left + 'px';
       timer.style.width = rect.width + 'px';
-      timer.style.transform = 'none';
       timer.style.position = 'fixed';
+      timer.style.marginLeft = '0';
+      timer.style.marginRight = '0';
     } else {
       // Let CSS handle it on small screens
       timer.style.left = '';
       timer.style.width = '';
       timer.style.position = '';
+      timer.style.marginLeft = '';
+      timer.style.marginRight = '';
     }
   }
 }
 
+window.addEventListener('load', positionTimerContainer);
+window.addEventListener('resize', positionTimerContainer);
+
+// Project Images Modal
+document.addEventListener('DOMContentLoaded', function() {
+    const projectImages = document.querySelectorAll('.project-image');
+    const modalImage = document.getElementById('modalImage');
+    const imageModal = document.getElementById('imageModal');
+    let isModalVisible = false;
+    let isHoveringThumbnail = false;
+    
+    function showModal(img) {
+        modalImage.src = img.dataset.hoverSrc;
+        imageModal.style.display = 'block';
+        setTimeout(() => {
+            imageModal.style.opacity = '1';
+        }, 10);
+        isModalVisible = true;
+    }
+    
+    function hideModal() {
+        if (!isHoveringThumbnail) {
+            imageModal.style.opacity = '0';
+            setTimeout(() => {
+                if (!isModalVisible && !isHoveringThumbnail) {
+                    imageModal.style.display = 'none';
+                }
+            }, 200);
+            isModalVisible = false;
+        }
+    }
+    
+    projectImages.forEach(img => {
+        img.addEventListener('mouseenter', () => {
+            isHoveringThumbnail = true;
+            showModal(img);
+        });
+        
+        img.addEventListener('mouseleave', () => {
+            isHoveringThumbnail = false;
+            setTimeout(() => {
+                if (!isModalVisible) {
+                    hideModal();
+                }
+            }, 50);
+        });
+    });
+
+    imageModal.addEventListener('mousemove', (e) => {
+        const rect = modalImage.getBoundingClientRect();
+        const isOverImage = (
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom
+        );
+        
+        if (!isOverImage && !isHoveringThumbnail) {
+            isModalVisible = false;
+            hideModal();
+        } else {
+            isModalVisible = true;
+        }
+    });
+    
+    imageModal.addEventListener('mouseleave', () => {
+        if (!isHoveringThumbnail) {
+            isModalVisible = false;
+            hideModal();
+        }
+    });
+});

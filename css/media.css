@@ -1,18 +1,150 @@
+@media (min-width: 1166px) {
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.7rem !important;
+    }
 
+    .intro-text {
+        width: 90%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
-@media (max-width: 1088px) {
+    p {
+        width: 90%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
+    .vertical-timeline {
+        width: 90%;
+        margin: 0 !important;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 90%;
+        margin: 0;
+    }
+
+    .testimonials-container {
+        width: 90%;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1166px) {
+    
     .timer-widget {
-        padding-left: 14px !important;
+        width: 111px;
+        padding: 8px !important;
     }
 
     .timer-time {
-        padding: 0px !important;
+        font-size: 0.8rem !important;
+        margin-right: 0 !important;
     }
 
     .timer-date {
-        max-width: 13px !important;
-        padding: 0px !important;
+        font-size: 0.8rem !important;
+        padding: 0 !important;
+    }
+
+    .timer-date-number {
+        font-size: 0.8rem !important;
+    }
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.7rem !important;
+    }
+
+    .intro-text {
+        width: 80%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    p {
+        width: 80%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .vertical-timeline {
+        width: 80%;
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 90%;
+        margin: 0;
+    }
+
+    .carousel-controls-top {
+        right: 100px !important;
+    }
+
+    .project-image {
+        cursor: zoom-in;
+        width: 65%; 
+        border-radius: 12px; 
+        box-shadow: 0 2px 12px #0000001a; 
+    }
+
+    .project-overlay-grid {
+        position: absolute;
+        bottom: -125px;
+        right: 110px;
+        width: 360px;
+        height: 300px;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+        width: 200px;
+    }
+
+    .wireframe-image {
+        width: 130px; 
+        height: 180px; 
+        object-fit: cover; 
+        border-radius: 8px; 
+    }
+
+    .styleBoard-image {
+        width: 185px; 
+        height: 150px; 
+        margin-top: -132px; 
+        object-fit: cover; 
+        border-radius: 8px;
+    }
+
+    .navMap-image {
+        width: 130px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .testimonials-container {
+        width: 90%;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0;
     }
 }
 
@@ -93,13 +225,127 @@
         font-size: 3.7rem;
     }
 
-}
+    
+    .timer-widget {
+        width: 111px;
+        padding: 8px !important;
+    }
 
-@media (max-width: 1023px) {
+    .timer-time {
+        font-size: 0.8rem !important;
+        margin-right: 0 !important;
+    }
+
+    .timer-date {
+        font-size: 0.8rem !important;
+        padding: 0 !important;
+    }
+
+    .timer-date-number {
+        font-size: 0.8rem !important;
+    }
 
     .tick-tock-line,
     .tick-tock-line-text {
+        font-size: 0.7rem !important;
+    }
+
+    .intro-text {
+        width: 80%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    p {
+        width: 80%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .vertical-timeline {
+        width: 80%;
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 80%;
+        margin: 0;
+    }
+
+    .testimonials-container {
+        width: 80%;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 80%;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 1023px) {
+    
+    .timer-widget {
+        width: 111px;
+        padding: 8px !important;
+    }
+
+    .timer-time {
         font-size: 0.8rem !important;
+        margin-right: 0 !important;
+    }
+
+    .timer-date {
+        font-size: 0.8rem !important;
+        padding: 0 !important;
+    }
+
+    .timer-date-number {
+        font-size: 0.8rem !important;
+    }
+
+    .tick-tock-line,
+    .tick-tock-line-text {
+        font-size: 0.7rem !important;
+    }
+
+    .intro-text {
+        width: 80%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    p {
+        width: 80%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .vertical-timeline {
+        width: 80%;
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 80% !important;
+        margin: 0;
+    }
+
+    .testimonials-container {
+        width: 77% !important;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 80% !important;
+        margin: 0;
     }
 }
 
@@ -114,6 +360,17 @@
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0;
         padding-left: 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+        padding: 0;
+        width: 75% !important;
+        margin: 0;
     }
 }
 
@@ -134,6 +391,41 @@
     .name {
         width: 200px;
     }
+
+    .intro-text {
+        width: 70%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    p {
+        width: 70%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .vertical-timeline {
+        width: 70% !important;
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 70% !important;
+        margin: 0;
+    }
+
+    .testimonials-container {
+        width: 73% !important;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 72% !important;
+        margin: 0;
+    }
 }
 
 @media (max-width: 953px) {
@@ -141,6 +433,41 @@
     .tick-tock-line,
     .tick-tock-line-text {
         font-size: 0.7rem !important;
+    }
+
+    .intro-text {
+        width: 60%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    p {
+        width: 60%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .vertical-timeline {
+        width: 60% !important;
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 60% !important;
+        margin: 0;
+    }
+
+    .testimonials-container {
+        width: 63% !important;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 62% !important;
+        margin: 0;
     }
 }
 
@@ -162,9 +489,48 @@
         font-size: 1.8rem !important;
     }
 
+    .intro-text {
+        width: 50%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    p {
+        width: 50%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .vertical-timeline {
+        width: 50% !important;
+        margin: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0;
+        width: 50% !important;
+        margin: 0;
+    }
+
+    .testimonials-container {
+        width: 50% !important;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 50% !important;
+        margin: 0;
+    }
+
 }
 
 @media (max-width: 764px) {
+
+    #skills {
+        padding-top: 100px !important;
+    }
 
     .container {
         flex-direction: column !important;
@@ -172,9 +538,10 @@
     }
 
     .left-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .timer {
@@ -225,7 +592,12 @@
         width: 90%;
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
+    }
+
+    p {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .three-squares-container {
@@ -288,13 +660,15 @@
         transform: none !important;
         margin-top: 105px !important;
         margin-bottom: 25px !important;
-        margin-left: 20px !important;
-        margin-right: 20px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         z-index: 1000 !important;
         padding-left: 0 !important;
         justify-content: center !important;
         width: 90% !important;
+        max-width: 90% !important;
     }
+
 
     .tick-tock-line,
     .tick-tock-line-text {
@@ -302,17 +676,40 @@
         width: 188px !important;
     }
 
+    h2 {
+        margin-left: 20px !important;
+    }
+    .vertical-timeline {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
     .skill-box {
         width: 181px !important;
     }
 
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
         justify-content: center;
+        margin: 0 auto !important;
+        width: 100% !important;
+        padding: 20px !important;
     }
 
     .skill-name {
         font-size: 1rem !important;
+    }
+
+    .testimonials-container {
+        width: 90% !important;
+        margin: 0 auto !important;
+        padding: 20px !important;
+    }
+
+    .contact-form {
+        width: 90% !important;
+        margin: 20px !important;
+        padding: 20px !important;
     }
 }
 
@@ -364,6 +761,10 @@
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr) !important;
+        justify-content: center;
+        margin: auto !important;
+        width: 90% !important;
+        padding: 20px !important;
     }
 
     .testimonials-container {
@@ -510,10 +911,6 @@
 
     .im-line-break {
         display: none !important;
-    }
-
-    .intro-text {
-        width: 100%;
     }
 
     .three-squares-container {
@@ -709,15 +1106,10 @@
     .tick-tock-line,
     .tick-tock-line-text {
         font-size: 0.7rem !important;
-        width: 100px !important;
     }
 
     .timer-container {
         max-width: 220px !important;
-        padding: 5px !important;
-        max-height: 50px !important;
-        margin-top: 90px !important;
-        margin-left: 10px !important;
     }
 
     .timer-time {
@@ -737,28 +1129,5 @@
 
     .modal-content {
         background-image: none;
-    }
-}
-
-@media (max-width: 900px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 764px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-box {
-        height: 60px;
     }
 }
