@@ -359,70 +359,50 @@ window.addEventListener('resize', positionTimerContainer);
 
 // Project Images Modal
 document.addEventListener('DOMContentLoaded', function() {
-    const projectImages = document.querySelectorAll('.project-image');
-    const modalImage = document.getElementById('modalImage');
-    const imageModal = document.getElementById('imageModal');
-    let isModalVisible = false;
-    let isHoveringThumbnail = false;
-    
-    function showModal(img) {
-        modalImage.src = img.dataset.hoverSrc;
-        imageModal.style.display = 'block';
-        setTimeout(() => {
-            imageModal.style.opacity = '1';
-        }, 10);
-        isModalVisible = true;
-    }
-    
-    function hideModal() {
-        if (!isHoveringThumbnail) {
-            imageModal.style.opacity = '0';
-            setTimeout(() => {
-                if (!isModalVisible && !isHoveringThumbnail) {
-                    imageModal.style.display = 'none';
-                }
-            }, 200);
-            isModalVisible = false;
-        }
-    }
-    
-    projectImages.forEach(img => {
-        img.addEventListener('mouseenter', () => {
-            isHoveringThumbnail = true;
-            showModal(img);
-        });
-        
-        img.addEventListener('mouseleave', () => {
-            isHoveringThumbnail = false;
-            setTimeout(() => {
-                if (!isModalVisible) {
-                    hideModal();
-                }
-            }, 50);
+    const images = document.querySelectorAll('.project-image');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    let touchStartY = 0;
+    let touchEndY = 0;
+
+    // Open modal
+    images.forEach(img => {
+        ['click', 'touchend'].forEach(eventType => {
+            img.addEventListener(eventType, function(e) {
+                e.preventDefault();
+                const src = this.getAttribute('data-hover-src') || this.src;
+                modal.style.display = 'flex';
+                modalImg.src = src;
+                document.body.style.overflow = 'hidden';
+            });
         });
     });
 
-    imageModal.addEventListener('mousemove', (e) => {
-        const rect = modalImage.getBoundingClientRect();
-        const isOverImage = (
-            e.clientX >= rect.left &&
-            e.clientX <= rect.right &&
-            e.clientY >= rect.top &&
-            e.clientY <= rect.bottom
-        );
-        
-        if (!isOverImage && !isHoveringThumbnail) {
-            isModalVisible = false;
-            hideModal();
-        } else {
-            isModalVisible = true;
+    // Handle touch events for swipe down to close
+    modal.addEventListener('touchstart', function(e) {
+        touchStartY = e.changedTouches[0].screenY;
+    }, false);
+
+    modal.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].screenY;
+        if (touchEndY - touchStartY > 50) { // Swipe down
+            closeModal();
+        }
+    }, false);
+
+    // Close modal when clicking anywhere
+    modal.addEventListener('click', closeModal);
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
         }
     });
-    
-    imageModal.addEventListener('mouseleave', () => {
-        if (!isHoveringThumbnail) {
-            isModalVisible = false;
-            hideModal();
-        }
-    });
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        modalImg.src = '';
+    }
 });

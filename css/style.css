@@ -192,8 +192,8 @@ h4 {
 
 /* Left column */
 .left-column {
-    flex: 0.8;
-    min-height: 600px;
+    flex: 1.2 !important;
+    min-height: 670px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgb(0 0 0 / 69%);
     background-color: #1e1d1e;
@@ -217,7 +217,7 @@ h4 {
 }
 
 .profile-image {
-    width: 65%;
+    width: 90%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -228,8 +228,8 @@ h4 {
 .name-heading {
     font-family: 'Anton', sans-serif;
     color: #ffffff;
-    font-size: 1.8rem;
-    margin-top: 20px;
+    font-size: 1.6rem;
+    margin-top: 15px;
     letter-spacing: 1px;
     text-align: center;
 }
@@ -238,8 +238,8 @@ h4 {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     text-align: center;
-    margin-top: 10px;
-    font-size: 1.1rem;
+    margin-top: 5px;
+    font-size: 1rem;
     letter-spacing: 1px;
     opacity: 0.9;
     font-weight: 300;
@@ -260,7 +260,7 @@ h4 {
     margin-bottom: 30px;
     transition: all 0.3s ease;
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     left: 0;
     right: 0;
     width: fit-content;
@@ -507,6 +507,35 @@ h4 {
     height: 24px !important;
     filter: brightness(0) invert(1);
     display: block !important;
+}
+
+#imageModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.modal-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .modal {
@@ -836,7 +865,7 @@ h4 {
     position: fixed;
     top: 0;
     z-index: 1100;
-    max-width: 350px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     /* left: 50%; */
@@ -984,11 +1013,19 @@ h4 {
 .carousel-controls-top {
     position: absolute;
     top: 0 !important;
-    right: 20px !important;
+    right: 40px !important;
     padding-top: 0 !important;
     z-index: 10;
     display: flex;
     gap: 10px;
+}
+
+.testimonial-controls {
+    position: absolute;
+    top: 15px !important;
+    right: 20px !important;
+    padding-top: 0 !important;
+    z-index: 10;
 }
 
 .carousel-controls-top .carousel-control-prev,
@@ -1015,6 +1052,31 @@ margin: 0 auto;
     width: 75%;
     border-radius: 12px;
     box-shadow: 0 2px 12px #0000001a;
+    transition: transform 0.2s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.show-modal {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
 }
 
 .styleBoard-image {
@@ -1045,6 +1107,10 @@ margin: 0 auto;
 
 .project-description {
     font-size: 0.8rem;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
 }
 
 
@@ -1054,6 +1120,11 @@ margin: 0 auto;
 
 .project-buttons-row img {
     cursor: pointer;
+}
+
+.project-buttons-container {
+    width: 45%; 
+    margin-left: 10px;
 }
 
 
@@ -1158,15 +1229,6 @@ margin: 0 auto;
 }
 
 
-.carousel-controls-top {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
-    z-index: 2;
-}
-
 .carousel-control-prev,
 .carousel-control-next {
     position: static !important;
@@ -1191,14 +1253,15 @@ margin: 0 auto;
 
 .timer-container,
 .left-column {
-    width: 350px;
-    /* or your preferred width */
-    max-width: 100%;
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
 }
 
 .project-tech-icons-marquee {
     overflow: hidden;
-    width: 96%;
+    width: 100%;
+    margin-top: -5px;
 }
 
 .project-overlay-grid {
@@ -1249,4 +1312,8 @@ margin: 0 auto;
     100% {
         transform: translateX(-50%);
     }
+}
+
+.linkedin-icon {
+    filter: brightness(0) invert(1);
 }
