@@ -41,16 +41,16 @@
           lightModeIcon.addEventListener('click', function() {
             lightModeIcon.hidden = true;
             darkModeIcon.hidden = false;
-            document.body.style.backgroundImage = "url('images/light_background.png')";
+            document.body.style.backgroundImage = "url('images/light_background.webp')";
             document.body.classList.add('light-mode');
-            if (profileImage) profileImage.src = 'images/AngelikaWysocka_bright.jpg';
+            if (profileImage) profileImage.src = 'images/AngelikaWysocka_bright.webp';
           });
           darkModeIcon.addEventListener('click', function() {
             darkModeIcon.hidden = true;
             lightModeIcon.hidden = false;
-            document.body.style.backgroundImage = "url('images/dark_background.png')";
+            document.body.style.backgroundImage = "url('images/dark_background.webp')";
             document.body.classList.remove('light-mode');
-            if (profileImage) profileImage.src = 'images/AngelikaWysocka_dark.jpg';
+            if (profileImage) profileImage.src = 'images/AngelikaWysocka_dark.webp';
           });
         }
 

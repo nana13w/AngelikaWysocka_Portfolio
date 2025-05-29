@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelika Wysocka - Portfolio</title>
+    <meta name="description" content="Angelika Wysocka - Web Developer & Designer Portfolio. Specialising in modern, user-friendly websites with expertise in front-end and back-end development.">
+    <meta name="keywords" content="web developer, front end developer, back end developer, portfolio, Angelika Wysocka, Scotland, web design, UI/UX, HTML, CSS, JavaScript, PHP, MySQL">
+    <meta name="author" content="Angelika Wysocka">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Angelika Wysocka - Web Developer Portfolio">
+    <meta property="og:description" content="Portfolio showcasing web development projects and skills by Angelika Wysocka">
+    <meta property="og:image" content="images/AngelikaWysocka_dark.webp">
+    <meta property="og:url" content="https://nana13w.github.io/portfolio/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://nana13w.github.io/portfolio/">
+    <title>Angelika Wysocka - Web Developer & Designer Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,32 +24,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Angelika Wysocka",
+      "jobTitle": "Web Developer & Designer",
+      "url": "https://nana13w.github.io/portfolio/",
+      "image": "images/AngelikaWysocka_dark.webp",
+      "sameAs": [
+        "https://github.com/nana13w",
+        "https://www.linkedin.com/in/angelika-wysocka-087925213"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wishaw",
+        "addressRegion": "Scotland",
+        "addressCountry": "UK"
+      },
+      "description": "Web Developer and Designer specializing in modern, user-friendly websites with expertise in front-end and back-end development.",
+      "knowsAbout": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "PHP",
+        "MySQL",
+        "WordPress",
+        "Web Development",
+        "UI/UX Design"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <img src="images/icons/light_mode.svg" alt="Light Mode" id="light-mode-toggle" class="light-mode-icon">
-    <img src="images/icons/dark_mode.svg" alt="Dark Mode" id="dark-mode-toggle" class="dark-mode-icon" hidden>
+    <img src="images/icons/light_mode.svg" alt="Switch to light theme mode" id="light-mode-toggle" class="light-mode-icon">
+    <img src="images/icons/dark_mode.svg" alt="Switch to dark theme mode" id="dark-mode-toggle" class="dark-mode-icon" hidden>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid nav-container">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home"><i class="bi bi-house-fill"></i></a>
+                        <a class="nav-link" href="#home" aria-label="Navigate to home section"><i class="bi bi-house-fill" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class="bi bi-person-fill"></i></a>
+                        <a class="nav-link" href="#about" aria-label="Navigate to about section"><i class="bi bi-person-fill" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills"><i class="bi bi-code-square"></i></a>
+                        <a class="nav-link" href="#skills" aria-label="Navigate to skills section"><i class="bi bi-code-square" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects"><i class="bi bi-folder-fill"></i></a>
+                        <a class="nav-link" href="#projects" aria-label="Navigate to projects section"><i class="bi bi-folder-fill" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials"><i class="bi bi-chat-quote-fill"></i></a>
+                        <a class="nav-link" href="#testimonials" aria-label="Navigate to testimonials section"><i class="bi bi-chat-quote-fill" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="bi bi-envelope-fill"></i></a>
+                        <a class="nav-link" href="#contact" aria-label="Navigate to contact section"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
@@ -61,30 +104,30 @@
         <div class="container">
             <div class="left-column">
 
-                <img src="images/light_logo.svg" alt="Light Logo" class="light-logo">
-                <img src="images/AngelikaWysocka_dark.jpg" alt="Angelika Wysocka" class="profile-image">
+                <img src="images/light_logo.svg" alt="Angelika Wysocka - Web Developer Portfolio Logo" class="light-logo">
+                <img src="images/AngelikaWysocka_dark.webp" alt="Angelika Wysocka - Professional Web Developer and Designer Portrait" class="profile-image">
                 <h1 class="name-heading">Angelika Wysocka</h1>
                 <h2 class="subtitle">Product Designer & Developer</h2>
                 <h2 class="subtitle">Wishaw, Scotland, UK</h2>
                 <div class="buttons-container" style="display: flex; justify-content: center; gap: 20px; padding: 20px;">
-                    <a href="https://github.com/nana13w" class="github-icon-link"><img
-                        src="images/icons/github-light.svg" alt="GitHub" class="github-icon"
+                    <a href="https://github.com/nana13w" class="github-icon-link" aria-label="View my GitHub profile"><img
+                        src="images/icons/github-light.svg" alt="Visit my GitHub profile for code repositories" class="github-icon"
                         style="width: 30px; height: 30px; border-radius: 6px;"></a>
-                    <a href="https://www.linkedin.com/in/angelika-wysocka-087925213" class="linkedin-icon-link"><img
-                        src="images/icons/linkin.svg" alt="LinkedIn" class="linkedin-icon"
+                    <a href="https://www.linkedin.com/in/angelika-wysocka-087925213" class="linkedin-icon-link" aria-label="Connect on LinkedIn"><img
+                        src="images/icons/linkin.svg" alt="Connect with me on LinkedIn" class="linkedin-icon"
                         style="width: 30px; height: 30px; border-radius: 6px;"></a>
-                    <a href="#" class="email-icon-link" data-email="andziawysocka01@gmail.com"><img
-                        src="images/icons/email.svg" alt="Email" class="email-icon"
+                    <a href="#" class="email-icon-link" data-email="andziawysocka01@gmail.com" aria-label="Copy email address"><img
+                        src="images/icons/email.svg" alt="Contact me via email" class="email-icon"
                         style="width: 30px; height: 30px; border-radius: 6px;"></a>
                 </div>
-                <button class="talk-button">Let's Talk</button>
+                <button class="talk-button" aria-label="Open contact form">Let's Talk</button>
             </div>
             <div class="right-column">
                 <section id="home">
                     <h1 class="section-heading">
-                        <span class="hello-line">Hello <img src="images/icons/hand.svg" alt="waving hand"
+                        <span class="hello-line">Hello <img src="images/icons/hand.svg" alt="Animated waving hand emoji"
                                 class="wave"></span>
-                        <span class="im-line">I'm <img src="images/icons/name.svg" alt="name" class="name">.</span>
+                        <span class="im-line">I'm <img src="images/icons/name.svg" alt="Angelika Wysocka handwritten signature" class="name">.</span>
                         <br class="im-line-break">
                         <span class="im-line-two">I'm <span class="letter">a</span>
                             <span class="titles">
@@ -156,84 +199,84 @@
                     <h1 class="section-heading">Skills</h1>
                     <div class="skills-grid">
                         <div class="skill-box">
-                            <img src="images/icons/html.svg" alt="HTML" class="skill-logo">
+                            <img src="images/icons/html.svg" alt="HTML5 - Web Development Markup Language" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">HTML5</div>
                                 <div class="skill-desc">Markup Language</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/css.svg" alt="CSS" class="skill-logo">
+                            <img src="images/icons/css.svg" alt="CSS3 - Web Styling and Design" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">CSS3</div>
                                 <div class="skill-desc">Style Sheet Language</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/js.svg" alt="JavaScript" class="skill-logo">
+                            <img src="images/icons/js.svg" alt="JavaScript - Dynamic Web Programming" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">JavaScript</div>
                                 <div class="skill-desc">Programming Language</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/bootstrap.svg" alt="Bootstrap" class="skill-logo">
+                            <img src="images/icons/bootstrap.svg" alt="Bootstrap - Responsive Framework" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">Bootstrap</div>
                                 <div class="skill-desc">CSS Framework</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/jquery.svg" alt="jQuery" class="skill-logo">
+                            <img src="images/icons/jquery.svg" alt="jQuery - JavaScript Library for Web Development" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">jQuery</div>
                                 <div class="skill-desc">JavaScript Library</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/cursor.svg" alt="Cursor" class="skill-logo cursor-logo">
+                            <img src="images/icons/cursor.svg" alt="Cursor - AI-Powered Code Editor" class="skill-logo cursor-logo">
                             <div class="skill-info">
                                 <div class="skill-name">Cursor</div>
                                 <div class="skill-desc">Code Editor</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/vscode.svg" alt="VSCode" class="skill-logo">
+                            <img src="images/icons/vscode.svg" alt="Visual Studio Code - Development Environment" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">VSCode</div>
                                 <div class="skill-desc">Code Editor</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/github.svg" alt="GitHub" class="skill-logo">
+                            <img src="images/icons/github.svg" alt="GitHub - Version Control and Collaboration Platform" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">GitHub</div>
                                 <div class="skill-desc">Version Control</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/php.svg" alt="PHP" class="skill-logo">
+                            <img src="images/icons/php.svg" alt="PHP - Server-side Programming Language" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">PHP</div>
                                 <div class="skill-desc">Programming Language</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/mysql.svg" alt="MySQL" class="skill-logo">
+                            <img src="images/icons/mysql.svg" alt="MySQL - Database Management System" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">MySQL</div>
                                 <div class="skill-desc">Database</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/wordpress.svg" alt="WordPress" class="skill-logo">
+                            <img src="images/icons/wordpress.svg" alt="WordPress - Content Management System" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">WordPress</div>
                                 <div class="skill-desc">Content Management System</div>
                             </div>
                         </div>
                         <div class="skill-box">
-                            <img src="images/icons/canva.svg" alt="Canva" class="skill-logo">
+                            <img src="images/icons/canva.svg" alt="Canva - Graphic Design Tool" class="skill-logo">
                             <div class="skill-info">
                                 <div class="skill-name">Canva</div>
                                 <div class="skill-desc">Design Tool</div>
@@ -263,9 +306,9 @@
                             <div class="carousel-item active">
                                 <div class="project-carousel-slide joSmith-project">
                         <div class="project-main-image-wrapper" style="position: relative;">
-                                        <img src="images/portfolio_items/joSmith/joSmith_website.png"
-                                            alt="Jo Smith Website" class="project-image"
-                                            data-hover-src="images/portfolio_items/joSmith/joSmith_website_noColour.png">
+                                        <img src="images/portfolio_items/joSmith/joSmith_website.webp"
+                                            alt="Jo Smith Photography Portfolio - Responsive Website Design" class="project-image"
+                                            data-hover-src="images/portfolio_items/joSmith/joSmith_website_noColour.webp">
                                         <div class="project-overlay-grid">
                                             <div class="project-description-container">
                                     <h4>Jo Smith Portfolio</h4>
@@ -277,21 +320,21 @@
                                 </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 1; align-self: start; justify-self: end;">
-                                                <img src="images/portfolio_items/joSmith/wireframe.png" alt="Wireframe"
+                                                <img src="images/portfolio_items/joSmith/wireframe.webp" alt="Jo Smith Photography Portfolio - UX Wireframe Design"
                                                     class="project-image wireframe-image"
-                                                    data-hover-src="images/portfolio_items/joSmith/wireframe_noColour.png">
+                                                    data-hover-src="images/portfolio_items/joSmith/wireframe_noColour.webp">
                                 </div>
                                             <div
                                                 style="grid-column: 1; grid-row: 2; align-self: end; justify-self: start;">
-                                                <img src="images/portfolio_items/joSmith/styleBoard.png"
-                                                    alt="Style Guide" class="project-image styleBoard-image"
-                                                    data-hover-src="images/portfolio_items/joSmith/styleBoard_noColour.png">
+                                                <img src="images/portfolio_items/joSmith/styleBoard.webp"
+                                                    alt="Jo Smith Photography Portfolio - Brand Style Guide" class="project-image styleBoard-image"
+                                                    data-hover-src="images/portfolio_items/joSmith/styleBoard_noColour.webp">
                                 </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 2; align-self: end; justify-self: end;">
-                                                <img src="images/portfolio_items/joSmith/navMap.png" alt="Nav Map"
+                                                <img src="images/portfolio_items/joSmith/navMap.webp" alt="Jo Smith Photography Portfolio - Site Navigation Map"
                                                     class="project-image navMap-image"
-                                                    data-hover-src="images/portfolio_items/joSmith/navMap_noColour.png">
+                                                    data-hover-src="images/portfolio_items/joSmith/navMap_noColour.webp">
                                 </div>
                             </div>
                         </div>
@@ -308,26 +351,26 @@
                             <div class="project-tech-icons-marquee">
                                 <div class="marquee-track">
                                     <!-- One full set of icons -->
-                                    <img src="images/icons/html.svg" alt="HTML5">
-                                    <img src="images/icons/css.svg" alt="CSS3">
-                                    <img src="images/icons/js.svg" alt="JavaScript">
-                                    <img src="images/icons/bootstrap.svg" alt="Bootstrap">
-                                    <img src="images/icons/jquery.svg" alt="jQuery">
-                                    <img src="images/icons/cursor-light.svg" alt="Cursor">
-                                                <img src="images/icons/github-light.svg" class="github-icon alt="
+                                    <img src="images/icons/html.svg" alt="HTML5 Development">
+                                    <img src="images/icons/css.svg" alt="CSS3 Styling">
+                                    <img src="images/icons/js.svg" alt="JavaScript Programming">
+                                    <img src="images/icons/bootstrap.svg" alt="Bootstrap Framework">
+                                    <img src="images/icons/jquery.svg" alt="jQuery Library">
+                                    <img src="images/icons/cursor-light.svg" alt="Cursor IDE">
+                                                <img src="images/icons/github-light.svg" class="github-icon" alt="
                                                     GitHub">
-                                    <img src="images/icons/canva.svg" alt="Canva">
+                                    <img src="images/icons/canva.svg" alt="Canva Design">
 
                                     <!-- Duplicated set for seamless loop -->
-                                    <img src="images/icons/html.svg" alt="HTML5">
-                                    <img src="images/icons/css.svg" alt="CSS3">
-                                    <img src="images/icons/js.svg" alt="JavaScript">
-                                    <img src="images/icons/bootstrap.svg" alt="Bootstrap">
-                                    <img src="images/icons/jquery.svg" alt="jQuery">
-                                    <img src="images/icons/cursor-light.svg" alt="Cursor">
+                                    <img src="images/icons/html.svg" alt="HTML5 Development">
+                                    <img src="images/icons/css.svg" alt="CSS3 Styling">
+                                    <img src="images/icons/js.svg" alt="JavaScript Programming">
+                                    <img src="images/icons/bootstrap.svg" alt="Bootstrap Framework">
+                                    <img src="images/icons/jquery.svg" alt="jQuery Library">
+                                    <img src="images/icons/cursor-light.svg" alt="Cursor IDE">
                                                 <img src="images/icons/github-light.svg" class="github-icon"
                                                     alt="GitHub">
-                                                <img src="images/icons/canva.svg" alt="Canva">
+                                                <img src="images/icons/canva.svg" alt="Canva Design">
                                             </div>
                                         </div>
 
@@ -339,9 +382,9 @@
                             <div class="carousel-item">
                                 <div class="project-carousel-slide joSmith-project">
                                     <div class="project-main-image-wrapper" style="position: relative;">
-                                        <img src="images/portfolio_items/vinylsOnline/screenshot.png"
+                                        <img src="images/portfolio_items/vinylsOnline/screenshot.webp"
                                             alt="Vinyls Online Website" class="project-image"
-                                            data-hover-src="images/portfolio_items/vinylsOnline/screenshot_noColour.png">
+                                            data-hover-src="images/portfolio_items/vinylsOnline/screenshot_noColour.webp">
                                         <div class="project-overlay-grid">
                                             <div class="project-description-container">
                                                 <h4>Vinyls Online</h4>
@@ -352,21 +395,21 @@
                                             </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 1; align-self: start; justify-self: end;">
-                                                <img src="images/portfolio_items/vinylsOnline/wireframe.png"
+                                                <img src="images/portfolio_items/vinylsOnline/wireframe.webp"
                                                     alt="Wireframe" class="project-image wireframe-image"
-                                                    data-hover-src="images/portfolio_items/vinylsOnline/wireframe_noColour.png">
+                                                    data-hover-src="images/portfolio_items/vinylsOnline/wireframe_noColour.webp">
                                             </div>
                                             <div
                                                 style="grid-column: 1; grid-row: 2; align-self: end; justify-self: start;">
-                                                <img src="images/portfolio_items/vinylsOnline/styleBoard.png"
+                                                <img src="images/portfolio_items/vinylsOnline/styleBoard.webp"
                                                     alt="Style Guide" class="project-image styleBoard-image"
-                                                    data-hover-src="images/portfolio_items/vinylsOnline/styleBoard_noColour.png">
+                                                    data-hover-src="images/portfolio_items/vinylsOnline/styleBoard_noColour.webp">
                                             </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 2; align-self: end; justify-self: end;">
-                                                <img src="images/portfolio_items/vinylsOnline/navMap.png" alt="Nav Map"
+                                                <img src="images/portfolio_items/vinylsOnline/navMap.webp" alt="Nav Map"
                                                     class="project-image navMap-image"
-                                                    data-hover-src="images/portfolio_items/vinylsOnline/navMap_noColour.png">
+                                                    data-hover-src="images/portfolio_items/vinylsOnline/navMap_noColour.webp">
                                             </div>
                                         </div>
                                     </div>
@@ -414,9 +457,9 @@
                             <div class="carousel-item">
                                 <div class="project-carousel-slide joSmith-project">
                                     <div class="project-main-image-wrapper" style="position: relative;">
-                                        <img src="images/portfolio_items/ninaAndNiko/screenshot.png"
+                                        <img src="images/portfolio_items/ninaAndNiko/screenshot.webp"
                                             alt="Nina and Niko Website" class="project-image"
-                                            data-hover-src="images/portfolio_items/ninaAndNiko/screenshot_noColour.png">
+                                            data-hover-src="images/portfolio_items/ninaAndNiko/screenshot_noColour.webp">
                                         <div class="project-overlay-grid">
                                             <div class="project-description-container">
                                                 <h4>Nina and Niko</h4>
@@ -427,21 +470,21 @@
                                             </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 1; align-self: start; justify-self: end;">
-                                                <img src="images/portfolio_items/ninaAndNiko/wireframe.png"
+                                                <img src="images/portfolio_items/ninaAndNiko/wireframe.webp"
                                                     alt="Wireframe" class="project-image wireframe-image"
-                                                    data-hover-src="images/portfolio_items/ninaAndNiko/wireframe_noColour.png">
+                                                    data-hover-src="images/portfolio_items/ninaAndNiko/wireframe_noColour.webp">
                                             </div>
                                             <div
                                                 style="grid-column: 1; grid-row: 2; align-self: end; justify-self: start;">
-                                                <img src="images/portfolio_items/ninaAndNiko/styleBoard.png"
+                                                <img src="images/portfolio_items/ninaAndNiko/styleBoard.webp"
                                                     alt="Style Guide" class="project-image styleBoard-image"
-                                                    data-hover-src="images/portfolio_items/ninaAndNiko/styleBoard_noColour.png">
+                                                    data-hover-src="images/portfolio_items/ninaAndNiko/styleBoard_noColour.webp">
                                             </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 2; align-self: end; justify-self: end;">
-                                                <img src="images/portfolio_items/ninaAndNiko/navMap.png" alt="Nav Map"
+                                                <img src="images/portfolio_items/ninaAndNiko/navMap.webp" alt="Nav Map"
                                                     class="project-image navMap-image"
-                                                    data-hover-src="images/portfolio_items/ninaAndNiko/navMap_noColour.png">
+                                                    data-hover-src="images/portfolio_items/ninaAndNiko/navMap_noColour.webp">
                                             </div>
                                         </div>
                                     </div>
@@ -487,9 +530,9 @@
                             <div class="carousel-item">
                                 <div class="project-carousel-slide joSmith-project">
                                     <div class="project-main-image-wrapper" style="position: relative;">
-                                        <img src="images/portfolio_items/bikeKingBorders/screenshot.png"
+                                        <img src="images/portfolio_items/bikeKingBorders/screenshot.webp"
                                             alt="Bike King Borders Website" class="project-image"
-                                            data-hover-src="images/portfolio_items/bikeKingBorders/screenshot_noColour.png">
+                                            data-hover-src="images/portfolio_items/bikeKingBorders/screenshot_noColour.webp">
                                         <div class="project-overlay-grid">
                                             <div class="project-description-container">
                                                 <h4>Bike King Borders</h4>
@@ -500,21 +543,21 @@
                                             </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 1; align-self: start; justify-self: end;">
-                                                <img src="images/portfolio_items/bikeKingBorders/wireframe.png"
+                                                <img src="images/portfolio_items/bikeKingBorders/wireframe.webp"
                                                     alt="Wireframe" class="project-image wireframe-image"
-                                                    data-hover-src="images/portfolio_items/bikeKingBorders/wireframe_noColour.png">
+                                                    data-hover-src="images/portfolio_items/bikeKingBorders/wireframe_noColour.webp">
                                             </div>
                                             <div
                                                 style="grid-column: 1; grid-row: 2; align-self: end; justify-self: start;">
-                                                <img src="images/portfolio_items/bikeKingBorders/styleBoard.png"
+                                                <img src="images/portfolio_items/bikeKingBorders/styleBoard.webp"
                                                     alt="Style Guide" class="project-image styleBoard-image"
-                                                    data-hover-src="images/portfolio_items/bikeKingBorders/styleBoard_noColour.png">
+                                                    data-hover-src="images/portfolio_items/bikeKingBorders/styleBoard_noColour.webp">
                                             </div>
                                             <div
                                                 style="grid-column: 2; grid-row: 2; align-self: end; justify-self: end;">
-                                                <img src="images/portfolio_items/bikeKingBorders/navMap.png"
+                                                <img src="images/portfolio_items/bikeKingBorders/navMap.webp"
                                                     alt="Nav Map" class="project-image navMap-image"
-                                                    data-hover-src="images/portfolio_items/bikeKingBorders/navMap_noColour.png">
+                                                    data-hover-src="images/portfolio_items/bikeKingBorders/navMap_noColour.webp">
                                             </div>
                                         </div>
                                     </div>
@@ -575,7 +618,7 @@
                             <div class="carousel-item active">
                                 <div class="testimonial-header d-flex align-items-center">
                                     <div class="testimonial-profile">
-                                        <img src="images/profil1.png" alt="Profile 1" class="profile-pic">
+                                        <img src="images/profil1.webp" alt="John Smith - Client Testimonial" class="profile-pic">
                                     </div>
                                     <div class="testimonial-author ms-3">
                                         <h3>John Smith</h3>
@@ -593,7 +636,7 @@
                             <div class="carousel-item">
                                 <div class="testimonial-header d-flex align-items-center">
                                     <div class="testimonial-profile">
-                                        <img src="images/profil2.png" alt="Profile 2" class="profile-pic">
+                                        <img src="images/profil2.webp" alt="Sarah Johnson - Client Testimonial" class="profile-pic">
                                     </div>
                                     <div class="testimonial-author ms-3">
                                         <h3>Sarah Johnson</h3>
@@ -610,7 +653,7 @@
                             <div class="carousel-item">
                                 <div class="testimonial-header d-flex align-items-center">
                                     <div class="testimonial-profile">
-                                        <img src="images/profil3.png" alt="Profile 3" class="profile-pic">
+                                        <img src="images/profil3.webp" alt="Michael Brown - Client Testimonial" class="profile-pic">
                                     </div>
                                     <div class="testimonial-author ms-3">
                                         <h3>Michael Brown</h3>
@@ -659,7 +702,7 @@
     </button>
 
     <button class="talk-button modal-button">
-        <img src="images/icons/talk.svg" alt="Let's Talk" class="talk-icon" style="width: 24px; height: 24px;">
+        <img src="images/icons/talk.svg" alt="Open contact form dialog" class="talk-icon" style="width: 24px; height: 24px;">
     </button>
 
     <div class="modal">
@@ -698,7 +741,7 @@
     <!-- Lightbox Modal for Project Images -->
     <div id="imageModal">
         <div class="modal-image-container">
-            <img id="modalImage" src="" alt="Project Preview">
+            <img id="modalImage" src="" alt="Enlarged project image view" aria-label="Project preview in modal">
         </div>
     </div>
 </body>
