@@ -87,6 +87,79 @@
         startTitleTypewriter();
         // Position timer-container above left-column
         positionTimerContainer();
+
+        // Add click handler for talk button
+        const talkButton = document.querySelector('.left-column .talk-button');
+        if (talkButton) {
+            talkButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Social media icons tooltips
+        function setupTooltip(selector, tooltipText, tooltipClass) {
+            const element = document.querySelector(selector);
+            if (element) {
+                let tooltip = null;
+
+                element.addEventListener('mouseover', function() {
+                    tooltip = document.createElement('div');
+                    tooltip.className = tooltipClass;
+                    tooltip.textContent = tooltipText;
+                    this.appendChild(tooltip);
+                });
+
+                element.addEventListener('mouseout', function() {
+                    if (tooltip) {
+                        tooltip.remove();
+                        tooltip = null;
+                    }
+                });
+            }
+        }
+
+        // Setup tooltips for social media icons
+        setupTooltip('.github-icon-link', 'Open GitHub Profile', 'github-tooltip');
+        setupTooltip('.linkedin-icon-link', 'Open LinkedIn Profile', 'linkedin-tooltip');
+
+        // Email icon functionality with copy
+        const emailLink = document.querySelector('.email-icon-link');
+        if (emailLink) {
+            let tooltip = null;
+
+            emailLink.addEventListener('mouseover', function() {
+                tooltip = document.createElement('div');
+                tooltip.className = 'email-tooltip';
+                tooltip.textContent = 'Click to copy email';
+                this.appendChild(tooltip);
+            });
+
+            emailLink.addEventListener('mouseout', function() {
+                if (tooltip) {
+                    tooltip.remove();
+                    tooltip = null;
+                }
+            });
+
+            emailLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const email = this.getAttribute('data-email');
+                navigator.clipboard.writeText(email).then(() => {
+                    if (tooltip) {
+                        tooltip.textContent = 'Email copied!';
+                        setTimeout(() => {
+                            if (tooltip) {
+                                tooltip.textContent = 'Click to copy email';
+                            }
+                        }, 1500);
+                    }
+                });
+            });
+        }
       });
 
 // Timer for widget layout
@@ -158,111 +231,140 @@ modal.addEventListener('click', (e) => {
 });
 
 // Contact Form Validation
-const contactForm = document.getElementById('contactForm');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-const nameError = document.getElementById('nameError');
-const emailError = document.getElementById('emailError');
-const messageError = document.getElementById('messageError');
+function setupFormValidation(formId, nameId, emailId, messageId, nameErrorId, emailErrorId, messageErrorId) {
+    const form = document.getElementById(formId);
+    const nameInput = document.getElementById(nameId);
+    const emailInput = document.getElementById(emailId);
+    const messageInput = document.getElementById(messageId);
+    const nameError = document.getElementById(nameErrorId);
+    const emailError = document.getElementById(emailErrorId);
+    const messageError = document.getElementById(messageErrorId);
 
-function validateName(name) {
-    if (name.trim() === '') {
-        return 'Name is required';
+    if (!form || !nameInput || !emailInput || !messageInput || !nameError || !emailError || !messageError) {
+        return;
     }
-    if (name.length < 2) {
-        return 'Name must be at least 2 characters long';
+
+    function validateName(name) {
+        if (name.trim() === '') {
+            return 'Name is required';
+        }
+        if (name.length < 2) {
+            return 'Name must be at least 2 characters long';
+        }
+        return '';
     }
-    return '';
+
+    function validateEmail(email) {
+        if (email.trim() === '') {
+            return 'Email is required';
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return 'Please enter a valid email address';
+        }
+        return '';
+    }
+
+    function validateMessage(message) {
+        if (message.trim() === '') {
+            return 'Message is required';
+        }
+        if (message.length < 10) {
+            return 'Message must be at least 10 characters long';
+        }
+        return '';
+    }
+
+    function showError(input, errorElement, message) {
+        input.classList.add('error');
+        errorElement.textContent = message;
+    }
+
+    function clearError(input, errorElement) {
+        input.classList.remove('error');
+        errorElement.textContent = '';
+    }
+
+    // Real-time validation
+    nameInput.addEventListener('input', () => {
+        const error = validateName(nameInput.value);
+        if (error) {
+            showError(nameInput, nameError, error);
+        } else {
+            clearError(nameInput, nameError);
+        }
+    });
+
+    emailInput.addEventListener('input', () => {
+        const error = validateEmail(emailInput.value);
+        if (error) {
+            showError(emailInput, emailError, error);
+        } else {
+            clearError(emailInput, emailError);
+        }
+    });
+
+    messageInput.addEventListener('input', () => {
+        const error = validateMessage(messageInput.value);
+        if (error) {
+            showError(messageInput, messageError, error);
+        } else {
+            clearError(messageInput, messageError);
+        }
+    });
+
+    // Form submission
+    form.addEventListener('submit', (e) => {
+        const nameErrorMsg = validateName(nameInput.value);
+        const emailErrorMsg = validateEmail(emailInput.value);
+        const messageErrorMsg = validateMessage(messageInput.value);
+        
+        let hasError = false;
+        
+        if (nameErrorMsg) {
+            showError(nameInput, nameError, nameErrorMsg);
+            hasError = true;
+        }
+        
+        if (emailErrorMsg) {
+            showError(emailInput, emailError, emailErrorMsg);
+            hasError = true;
+        }
+        
+        if (messageErrorMsg) {
+            showError(messageInput, messageError, messageErrorMsg);
+            hasError = true;
+        }
+        
+        if (hasError) {
+            e.preventDefault();
+        }
+    });
 }
 
-function validateEmail(email) {
-    if (email.trim() === '') {
-        return 'Email is required';
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        return 'Please enter a valid email address';
-    }
-    return '';
-}
+// Initialize both forms
+document.addEventListener('DOMContentLoaded', function() {
+    // Setup section contact form
+    setupFormValidation(
+        'sectionContactForm',
+        'section-name',
+        'section-email',
+        'section-message',
+        'section-nameError',
+        'section-emailError',
+        'section-messageError'
+    );
 
-function validateMessage(message) {
-    if (message.trim() === '') {
-        return 'Message is required';
-    }
-    if (message.length < 10) {
-        return 'Message must be at least 10 characters long';
-    }
-    return '';
-}
-
-function showError(input, errorElement, message) {
-    input.classList.add('error');
-    errorElement.textContent = message;
-}
-
-function clearError(input, errorElement) {
-    input.classList.remove('error');
-    errorElement.textContent = '';
-}
-
-// Real-time validation
-nameInput.addEventListener('input', () => {
-    const error = validateName(nameInput.value);
-    if (error) {
-        showError(nameInput, nameError, error);
-    } else {
-        clearError(nameInput, nameError);
-    }
-});
-
-emailInput.addEventListener('input', () => {
-    const error = validateEmail(emailInput.value);
-    if (error) {
-        showError(emailInput, emailError, error);
-    } else {
-        clearError(emailInput, emailError);
-    }
-});
-
-messageInput.addEventListener('input', () => {
-    const error = validateMessage(messageInput.value);
-    if (error) {
-        showError(messageInput, messageError, error);
-    } else {
-        clearError(messageInput, messageError);
-    }
-});
-
-// Form submission
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const nameError = validateName(nameInput.value);
-    const emailError = validateEmail(emailInput.value);
-    const messageError = validateMessage(messageInput.value);
-    
-    let hasError = false;
-    
-    if (nameError) {
-        showError(nameInput, nameError, nameError);
-        hasError = true;
-    }
-    
-    if (emailError) {
-        showError(emailInput, emailError, emailError);
-        hasError = true;
-    }
-    
-    if (messageError) {
-        showError(messageInput, messageError, messageError);
-        hasError = true;
-    }
-    
-    if (!hasError) {
-        contactForm.reset();
-    }
+    // Setup modal contact form
+    setupFormValidation(
+        'modalContactForm',
+        'modal-name',
+        'modal-email',
+        'modal-message',
+        'modal-nameError',
+        'modal-emailError',
+        'modal-messageError'
+    );
 });
 
 // Typewriter effect for .title-item (true typing and erasing)
@@ -369,7 +471,15 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => {
         ['click', 'touchend'].forEach(eventType => {
             img.addEventListener(eventType, function(e) {
-                e.preventDefault();
+                if (eventType === 'touchend') {
+                    // Only prevent default for touch events if it's not a scroll
+                    const touchY = e.changedTouches[0].screenY;
+                    if (Math.abs(touchY - touchStartY) < 10) {
+                        e.preventDefault();
+                    }
+                } else {
+                    e.preventDefault();
+                }
                 const src = this.getAttribute('data-hover-src') || this.src;
                 modal.style.display = 'flex';
                 modalImg.src = src;
@@ -381,14 +491,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle touch events for swipe down to close
     modal.addEventListener('touchstart', function(e) {
         touchStartY = e.changedTouches[0].screenY;
-    }, false);
+    }, { passive: true });
 
     modal.addEventListener('touchend', function(e) {
         touchEndY = e.changedTouches[0].screenY;
         if (touchEndY - touchStartY > 50) { // Swipe down
             closeModal();
         }
-    }, false);
+    }, { passive: true });
 
     // Close modal when clicking anywhere
     modal.addEventListener('click', closeModal);

@@ -67,11 +67,14 @@
                 <h2 class="subtitle">Product Designer & Developer</h2>
                 <h2 class="subtitle">Wishaw, Scotland, UK</h2>
                 <div class="buttons-container" style="display: flex; justify-content: center; gap: 20px; padding: 20px;">
-                    <a href="https://github.com/nana13w"><img
+                    <a href="https://github.com/nana13w" class="github-icon-link"><img
                         src="images/icons/github-light.svg" alt="GitHub" class="github-icon"
                         style="width: 30px; height: 30px; border-radius: 6px;"></a>
-                    <a href="https://www.linkedin.com/in/angelika-wysocka-087925213"><img
+                    <a href="https://www.linkedin.com/in/angelika-wysocka-087925213" class="linkedin-icon-link"><img
                         src="images/icons/linkin.svg" alt="LinkedIn" class="linkedin-icon"
+                        style="width: 30px; height: 30px; border-radius: 6px;"></a>
+                    <a href="#" class="email-icon-link" data-email="andziawysocka01@gmail.com"><img
+                        src="images/icons/email.svg" alt="Email" class="email-icon"
                         style="width: 30px; height: 30px; border-radius: 6px;"></a>
                 </div>
                 <button class="talk-button">Let's Talk</button>
@@ -556,7 +559,7 @@
                     <h1 class="section-heading">Testimonials</h1>
                     <div id="testimonialCarousel" class="carousel slide testimonials-container position-relative"
                         data-bs-ride="carousel" data-bs-interval="6000">
-                        <div class="carousel-controls-top testimonial-controls">
+                        <div class="testimonial-controls carousel-controls-top">
                             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
                                 data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -627,22 +630,22 @@
 
                 <section id="contact">
                     <h1 class="section-heading">Let's Talk</h1>
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xanoaynb" method="POST">
+                    <form id="sectionContactForm" class="contact-form" action="https://formspree.io/f/xanoaynb" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message" id="nameError"></span>
+                            <label for="section-name">Name</label>
+                            <input type="text" id="section-name" name="name" required>
+                            <span class="error-message" id="section-nameError"></span>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message" id="emailError"></span>
+                            <label for="section-email">Email Address</label>
+                            <input type="email" id="section-email" name="email" required>
+                            <span class="error-message" id="section-emailError"></span>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <span class="error-message" id="messageError"></span>
+                            <label for="section-message">Message</label>
+                            <textarea id="section-message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="section-messageError"></span>
                         </div>
                         <button type="submit" class="submit-button">Send Message</button>
                     </form>
@@ -669,22 +672,22 @@
                 </div>
 
 
-                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xanoaynb" method="POST">
+                <form id="modalContactForm" class="contact-form modal-contact-form" action="https://formspree.io/f/xanoaynb" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <span class="error-message" id="nameError"></span>
+                        <label for="modal-name">Name</label>
+                        <input type="text" id="modal-name" name="name" required>
+                        <span class="error-message" id="modal-nameError"></span>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="emailError"></span>
+                        <label for="modal-email">Email Address</label>
+                        <input type="email" id="modal-email" name="email" required>
+                        <span class="error-message" id="modal-emailError"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <span class="error-message" id="messageError"></span>
+                        <label for="modal-message">Message</label>
+                        <textarea id="modal-message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="modal-messageError"></span>
                     </div>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
