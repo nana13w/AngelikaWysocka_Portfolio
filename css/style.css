@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background-image: url('../images/dark_background.png');
+    background-image: url('../images/dark_background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,16 +26,16 @@ body.light-mode .nav-link,
 body.light-mode .square-label,
 body.light-mode .talk-button,
 body.light-mode .talk-button-section,
-body.light-mode .square h1,
+body.light-mode .square h2,
 body.light-mode .form-group label,
 body.light-mode .timer-time,
 body.light-mode .timer-date,
 body.light-mode .tick-tock-line,
 body.light-mode .timeline-year,
 body.light-mode .timeline-content,
-body.light-mode h2,
 body.light-mode h3,
 body.light-mode h4,
+body.light-mode h5,
 body.light-mode .skill-name,
 body.light-mode .skill-desc,
 body.light-mode .project-description {
@@ -97,13 +97,13 @@ section {
 }
 
 
-h2 {
+h3 {
     font-family: 'Anton', sans-serif;
     color: #ffffff;
     margin-top: 40px;
 }
 
-h4 {
+h5 {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     font-size: 1rem;
@@ -120,7 +120,6 @@ h4 {
 }
 
 /* Header */
-
 
 .navbar {
     width: 350px;
@@ -183,7 +182,6 @@ h4 {
     z-index: 200;
 }
 
-/* Two column layout */
 .container {
     display: flex;
     align-items: flex-start;
@@ -445,7 +443,7 @@ h4 {
     justify-content: flex-start;
 }
 
-.square h1 {
+.square h2 {
     color: #fff;
     font-size: 4rem;
     margin: 20px 0 10px 0;
@@ -580,7 +578,7 @@ h4 {
     margin-right: 20px;
 }
 
-.modal h1 {
+.modal h2 {
     font-size: 1.5rem;
     margin: 10px;
 }
@@ -618,7 +616,7 @@ h4 {
     width: 100%;
 }
 
-.modal-body h2 {
+.modal-body h3 {
     color: #914bf1;
     margin-bottom: 10px;
     font-family: 'Anton', sans-serif;
@@ -765,6 +763,7 @@ h4 {
     gap: 0;
 }
 
+/* Timer Widget */
 .timer-time {
     color: #fff;
     font-family: 'Anton', sans-serif;
@@ -889,6 +888,7 @@ h4 {
     line-height: 1.2;
 }
 
+/* Vertical Timeline */
 .vertical-timeline {
     position: relative;
     width: 100%;
@@ -1228,7 +1228,7 @@ margin: 0 auto;
     object-fit: cover;
 }
 
-.testimonial-author h3 {
+.testimonial-author h4 {
     margin: 0;
     color: #fff;
     font-size: 1.2rem;
@@ -1385,7 +1385,12 @@ margin: 0 auto;
     transform: scale(1.1);
 }
 
-
+.footer-text {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
 
 @supports (-webkit-touch-callout: none) {
     .left-column {

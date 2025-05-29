@@ -263,7 +263,6 @@
         display: block;
     }
 
-    /* Always show navbar-collapse on small screens */
     .navbar-collapse,
     .collapse {
         display: flex !important;
@@ -272,7 +271,6 @@
         opacity: 1 !important;
     }
 
-    /* Optionally hide toggler if you don't want hamburger */
     .navbar-toggler {
         display: none !important;
     }
@@ -298,7 +296,7 @@
         width: 50%;
     }
 
-    .square h1 {
+    .square h2 {
         font-size: 3.7rem;
     }
 
@@ -400,7 +398,7 @@
         line-height: 17px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.9em !important;
     }
 
@@ -571,7 +569,7 @@
         margin-top: -5px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.9em !important;
     }
 
@@ -792,7 +790,7 @@
         line-height: 14px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.7em !important;
     }
 
@@ -822,7 +820,6 @@
         margin: 0;
     }
 
-    /* Separate rules for project carousel and testimonial controls */
     #projectCarousel .carousel-controls-top {
         right: 238px !important;
     }
@@ -833,7 +830,6 @@
     }
 }
 
-/* Image Modal Responsive Styles */
 @media screen and (max-width: 768px) {
     #imageModal {
         padding: 10px;
@@ -1012,7 +1008,7 @@
         width: 188px !important;
     }
 
-    h2 {
+    h5 {
         width: 90%;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -1145,7 +1141,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 1.4rem !important;
         width: 300px !important;
         padding-bottom: 10px !important;
@@ -1289,7 +1285,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 1.3rem !important;
         width: 265px !important;
         padding-bottom: 10px !important;
@@ -1342,7 +1338,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 1.2rem !important;
         width: 220px !important;
         padding-bottom: 10px !important;
@@ -1386,7 +1382,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 1.2rem !important;
         width: 200px !important;
         padding-bottom: 10px !important;
@@ -1451,7 +1447,7 @@
         height: 50px;
     }
 
-    .testimonial-author h3 {
+    .testimonial-author h5 {
         font-size: 1.1rem;
     }
 
@@ -1482,7 +1478,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 1.1rem !important;
         width: 180px !important;
         padding-bottom: 10px !important;
@@ -1519,7 +1515,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 1rem !important;
         width: 160px !important;
         padding-bottom: 10px !important;
@@ -1694,7 +1690,7 @@
         padding-left: 0;
     }
 
-    .square h1 {
+    .square h2 {
         font-size: 3rem;
         margin: 20px 0 10px 0;
     }
@@ -1741,7 +1737,7 @@
         line-height: 33px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.9rem !important;
         width: 145px !important;
         padding-bottom: 10px !important;
@@ -1794,7 +1790,7 @@
         line-height: 21px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.8rem !important;
         width: 125px !important;
         padding-bottom: 8px !important;
@@ -1868,7 +1864,7 @@
         line-height: 21px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.7rem !important;
         width: 112px !important;
         padding-bottom: 8px !important;
@@ -1939,7 +1935,7 @@
         min-width: 75px;
     }
 
-    .square h1 {
+    .square h2 {
         font-size: 2.4rem;
         margin: 20px 0 10px 0;
     }
@@ -1962,7 +1958,7 @@
         line-height: 18px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.7rem !important;
         width: 109px !important;
         padding-bottom: 0 !important;
@@ -2011,7 +2007,7 @@
         line-height: 18px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.7rem !important;
         width: 109px !important;
         padding-bottom: 0 !important;
@@ -2060,7 +2056,7 @@
         min-width: 65px;
     }
 
-    .square h1 {
+    .square h2 {
         font-size: 2rem;
         margin: 20px 0 10px 0;
     }
@@ -2096,7 +2092,7 @@
         line-height: 18px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.6rem !important;
         width: 96px !important;
         padding-bottom: 0 !important;
@@ -2157,7 +2153,7 @@
         line-height: 15px !important;
     }
 
-    .project-description-container h4 {
+    .project-description-container h5 {
         font-size: 0.6rem !important;
         width: 85px !important;
         padding-bottom: 0 !important;
