@@ -578,3 +578,47 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImg.src = '';
     }
 });
+
+// Responsive image swapping for mobile
+function swapImagesForMobile() {
+    const isMobile = window.innerWidth <= 764;
+
+    // Profile images
+    const profileImages = [
+        document.querySelector('img.profile-image[src*="AngelikaWysocka_dark.webp"]'),
+        document.querySelector('img.profile-image[src*="AngelikaWysocka_bright.webp"]')
+    ];
+    profileImages.forEach(img => {
+        if (!img) return;
+        const origSrc = img.getAttribute('data-orig-src') || img.src;
+        if (isMobile) {
+            if (!img.getAttribute('data-orig-src')) img.setAttribute('data-orig-src', origSrc);
+            if (!origSrc.includes('_mobile')) {
+                img.src = origSrc.replace('.webp', '_mobile.webp');
+            }
+        } else {
+            if (img.getAttribute('data-orig-src')) {
+                img.src = img.getAttribute('data-orig-src');
+            }
+        }
+    });
+
+    // Portfolio images
+    const portfolioImages = document.querySelectorAll('img[src*="portfolio_items/"]');
+    portfolioImages.forEach(img => {
+        const origSrc = img.getAttribute('data-orig-src') || img.src;
+        if (isMobile) {
+            if (!img.getAttribute('data-orig-src')) img.setAttribute('data-orig-src', origSrc);
+            if (!origSrc.includes('_mobile')) {
+                img.src = origSrc.replace('.webp', '_mobile.webp');
+            }
+        } else {
+            if (img.getAttribute('data-orig-src')) {
+                img.src = img.getAttribute('data-orig-src');
+            }
+        }
+    });
+}
+
+window.addEventListener('load', swapImagesForMobile);
+window.addEventListener('resize', swapImagesForMobile);
