@@ -105,7 +105,13 @@
             <div class="left-column">
 
                 <img src="images/light_logo.svg" alt="Angelika Wysocka - Web Developer Portfolio Logo" class="light-logo">
-                <img loading="lazy" src="images/AngelikaWysocka_dark.webp" alt="Angelika Wysocka - Professional Web Developer and Designer Portrait" class="profile-image">
+                <!-- Responsive profile image: use a smaller image for mobile screens -->
+                <picture>
+                  <!-- TODO: Create and compress images/AngelikaWysocka_dark-mobile.webp (e.g., 300px wide, <50KB) -->
+                  <source srcset="images/AngelikaWysocka_dark-mobile.webp" media="(max-width: 600px)">
+                  <source srcset="images/AngelikaWysocka_dark.webp">
+                  <img decoding="async" src="images/AngelikaWysocka_dark.webp" alt="Angelika Wysocka - Professional Web Developer and Designer Portrait" class="profile-image" width="400" height="400">
+                </picture>
                 <h1 class="name-heading">Angelika Wysocka</h1>
                 <h3 class="subtitle">Product Designer & Developer</h3>
                 <h3 class="subtitle">Wishaw, Scotland, UK</h3>
