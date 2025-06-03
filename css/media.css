@@ -1548,9 +1548,6 @@
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
 
     .section-heading {
         font-size: 1.3rem;
@@ -1603,10 +1600,6 @@
 
     .right-column {
         margin-top: 0;
-    }
-
-    .profile-image {
-        width: 80%;
     }
 
     .section-heading {
