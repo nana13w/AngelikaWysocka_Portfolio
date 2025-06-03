@@ -59,47 +59,6 @@ body.light-mode .project-overlay-grid {
     box-shadow: 0 2px 12px #000000 !important;
 }
 
-p {
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.13rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    padding: 20px 0;
-    padding-bottom: 20px !important;
-    scroll-margin-top: 100px;
-}
-
-
-h3 {
-    font-family: 'Anton', sans-serif;
-    color: #ffffff;
-    margin-top: 40px;
-}
-
-h5 {
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-#projects,
-#about,
-#testimonials,
-#contact {
-    padding-top: 75px;
-}
-
 /* Header */
 
 .navbar {
