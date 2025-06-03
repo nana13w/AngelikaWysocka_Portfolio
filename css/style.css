@@ -93,12 +93,6 @@ h5 {
     margin-bottom: 10px;
 }
 
-#projects,
-#about,
-#testimonials,
-#contact {
-    padding-top: 75px;
-}
 
 /* Header */
 
@@ -245,14 +239,6 @@ h5 {
     border-radius: 15px;
 }
 
-.section-heading {
-    font-family: 'Anton', sans-serif;
-    color: #ffffff;
-    font-size: 4rem;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
 /*Home page*/
 .intro-text {
     color: #ffffff;
@@ -391,28 +377,6 @@ h5 {
 
 .square-label {
     text-transform: uppercase;
-}
-
-.scroll-to-top {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.scroll-to-top:hover {
-    opacity: 1;
-}
-
-.scroll-to-top i {
-    font-size: 2.5rem;
-    color: #914bf1;
 }
 
 .modal-button {
@@ -683,146 +647,6 @@ h5 {
 .form-group input.error,
 .form-group textarea.error {
     border-color: #ff6b6b;
-}
-
-.timer-widget {
-    display: flex;
-    align-items: center;
-    border-right: 2px solid #914bf1;
-    padding: 8px 14px;
-    max-width: 150px;
-    justify-content: space-between;
-    height: 60px;
-    position: sticky;
-    top: 20px;
-    left: 0;
-    z-index: 100;
-    gap: 0;
-}
-
-/* Timer Widget */
-.timer-time {
-    color: #fff;
-    font-family: 'Anton', sans-serif;
-    font-size: 1rem;
-    padding: 6px;
-    margin-right: 6px;
-    width: auto;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.timer-date {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 6px;
-    margin-left: 6px;
-    margin-right: 6px;
-    color: #e0e6f8;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    min-width: 25px;
-}
-
-.timer-date-number {
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.timer-month {
-    font-size: 0.7rem;
-    margin-top: 1px;
-}
-
-@keyframes tickTockPulse {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    25% {
-        opacity: 0.5;
-        transform: scale(1.18);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    75% {
-        opacity: 0.5;
-        transform: scale(0.92);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.tick-tock-line-text {
-    animation: tickTockPulse 2s infinite steps(1, end);
-    word-break: break-word;
-    animation-delay: 0s;
-    color: #914bf1;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-}
-
-.tick-tock-line {
-    position: static;
-    z-index: auto;
-    margin-left: 12px;
-    color: #fff;
-    font-style: italic;
-    font-size: 0.8rem;
-    text-align: left;
-    line-height: 1.1;
-    background: none;
-    display: block;
-    position: sticky;
-    top: 20px;
-    left: 0;
-    letter-spacing: 0.5px;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
-    white-space: normal;
-    max-width: 318px;
-
-}
-
-
-
-.timer-container {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    z-index: 100;
-    width: fit-content;
-    padding-left: 0px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    box-shadow: 0 2px 12px #ffffff1f;
-    position: fixed;
-    top: 0;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tick-tock-line,
-.tick-tock-line-text {
-    font-size: 0.8rem;
-    max-width: 318px;
-    width: 318px;
-    white-space: normal;
-    word-break: break-word;
-    line-height: 1.2;
 }
 
 /* Vertical Timeline */

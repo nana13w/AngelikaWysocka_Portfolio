@@ -943,29 +943,6 @@
         margin-right: 0 !important;
     }
 
-    .timer-container {
-        position: static !important;
-        top: auto !important;
-        left: auto !important;
-        transform: none !important;
-        margin-top: 105px !important;
-        margin-bottom: 25px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        z-index: 1000 !important;
-        padding-left: 0 !important;
-        justify-content: center !important;
-        width: 75% !important;
-        max-width: 75% !important;
-    }
-
-
-    .tick-tock-line,
-    .tick-tock-line-text {
-        font-size: 1rem !important;
-        width: 188px !important;
-    }
-
     h5 {
         width: 90%;
         margin-left: auto !important;
