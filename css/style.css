@@ -952,14 +952,15 @@ body.light-mode .project-overlay-grid {
     align-items: center !important;
     justify-content: center !important;
     background: none !important;
+    transition: all 0.3s ease;
 }
 
 .carousel-controls-top .carousel-control-prev:hover,
 .carousel-controls-top .carousel-control-next:hover,
 .testimonial-controls .carousel-control-prev:hover,
 .testimonial-controls .carousel-control-next:hover {
-    opacity: 0.8;
-    background: none !important;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .carousel-control-prev-icon {

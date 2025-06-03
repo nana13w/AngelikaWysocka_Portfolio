@@ -283,7 +283,7 @@
         width: 240px;
     }
 
-    .im-line-two {
+    .im-line-two, .letter {
         font-size: 2.3rem !important;
     }
 
@@ -704,7 +704,7 @@
         width: 150px;
     }
 
-    .im-line-two {
+    .im-line-two, .letter {
         font-size: 1.8rem !important;
     }
 
@@ -1125,6 +1125,10 @@
         width: 90% !important;
         margin: 0 auto !important;
         padding: 20px !important;
+    }
+
+    .testimonial-header {
+        margin-top: 30px;
     }
 
     .contact-form {
@@ -1563,7 +1567,7 @@
         max-width: 140px;
     }
 
-    .im-line-two {
+    .im-line-two, .letter {
         font-size: 1.6rem !important;
     }
 
@@ -1615,7 +1619,7 @@
         margin-bottom: 0;
     }
 
-    .im-line-two {
+    .im-line-two, .letter {
         display: inline-block;
         width: auto;
         white-space: nowrap;
@@ -1775,7 +1779,7 @@
         width: 180px;
     }
 
-    .im-line-two {
+    .im-line-two, .letter  {
         font-size: 1.3rem !important;
     }
 
@@ -1799,6 +1803,10 @@
 
     .carousel-controls-top {
         padding: 0 !important;
+    }
+
+    #testimonialCarousel .testimonial-controls {
+        gap: 0px;
     }
 
     .project-overlay-grid {
@@ -1874,7 +1882,7 @@
         width: 180px;
     }
 
-    .im-line-two {
+    .im-line-two, .letter  {
         font-size: 1.3rem !important;
     }
 
@@ -1995,7 +2003,7 @@
         width: 160px;
     }
 
-    .im-line-two {
+    .im-line-two, .letter  {
         font-size: 1.2rem !important;
     }
 
