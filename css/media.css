@@ -145,6 +145,10 @@
         line-height: 1.6;
     }
 
+    .journey-container {
+        width: 80% !important;
+    }
+    
     .vertical-timeline {
         width: 80%;
         margin: 0;
@@ -701,7 +705,11 @@
     }
 
     .name {
-        width: 150px;
+        width: 240px;
+    }
+
+    .im-line, p, .titles-container, .three-squares-container {
+        width: 70%;
     }
 
     .im-line-two, .letter {
@@ -719,13 +727,12 @@
     }
 
     p {
-        width: 50%;
         font-size: 1rem;
         line-height: 1.6;
     }
 
     .vertical-timeline {
-        width: 50% !important;
+        width: 100% !important;
         margin: 0;
     }
 
@@ -830,7 +837,88 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 868px) {
+
+    .im-line, .titles-container, .three-squares-container, .journey-container {
+        width: 60%;
+    }
+
+    p {
+        width: 70% !important;
+    }
+
+    .wave {
+        width: 50px;
+        height: 50px;
+    }
+
+    .name {
+        width: 200px;
+    }
+
+    .im-line-two, .letter {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 848px) {
+
+    .im-line, .titles-container, .three-squares-container, .journey-container {
+        width: 55%;
+    }
+
+    p {
+        width: 65% !important;
+    }
+
+    .wave {
+        width: 45px;
+        height: 45px;
+    }
+
+    .name {
+        width: 180px;
+    }
+
+    .im-line-two, .letter {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 808px) {
+
+    .im-line, .titles-container, .three-squares-container, .journey-container {
+        width: 50%;
+    }
+
+    p {
+        width: 60% !important;
+    }
+
+    .wave {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        width: 160px;
+    }
+
+    .im-line-two, .letter {
+        font-size: 1.6rem !important;
+    }
+
+    .square h2 {
+        font-size: 2.5rem !important;
+    }
+
+    .square-label {
+        font-size: 1rem !important;
+    }
+}
+
+
+@media (max-width: 768px) {
     #imageModal {
         padding: 10px;
     }
@@ -876,14 +964,17 @@
 
     .intro-text {
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
     }
 
     p {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .introduction-text{
+        margin-left: 0 !important;
     }
 
     .three-squares-container {
@@ -971,6 +1062,11 @@
         margin-left: auto !important;
         margin-right: auto !important;
         text-align: center;
+    }
+
+    .journey-container {
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
     .vertical-timeline {
@@ -1564,7 +1660,6 @@
     .titles {
         min-width: 100px;
         width: 100%;
-        max-width: 140px;
     }
 
     .im-line-two, .letter {
@@ -1624,7 +1719,7 @@
         width: auto;
         white-space: nowrap;
         text-align: left;
-        font-size: 2.2rem !important;
+        font-size: 1.6rem !important;
         margin-top: 0;
     }
 
@@ -1655,9 +1750,7 @@
     }
 
     .hello-line,
-    .im-line,
-    .im-line-two,
-    .iam-line {
+    .im-line {
         display: block;
         width: 100%;
         text-align: center;
@@ -2008,7 +2101,7 @@
     }
 
     .title-item {
-        font-size: 1.4rem !important;
+        font-size: 1.2rem !important;
     }
 
     .square {

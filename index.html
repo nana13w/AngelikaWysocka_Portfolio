@@ -92,7 +92,7 @@
 
         h3 {
             font-family: 'Anton', sans-serif;
-            color: #ffffff;
+            color: #ffffff !important;
             margin-top: 40px;
         }
 
@@ -106,10 +106,13 @@
         }
 
         #projects,
-        #about,
         #testimonials,
         #contact {
             padding-top: 75px;
+        }
+
+        #about {
+            padding-top: 10px;
         }
 
         .container {
@@ -290,11 +293,12 @@
             <div class="right-column">
                 <section id="home">
                     <div class="section-heading">
-                        <span class="hello-line">Hello <img src="images/icons/hand.svg" alt="Animated waving hand emoji"
-                                class="wave"></span>
-                        <span class="im-line">I'm <img src="images/icons/name.svg"
+                        
+                        <span class="im-line"> <span class="hello-line"> <span class="hello-line-text">Hello</span> <img src="images/icons/hand.svg" alt="Animated waving hand emoji"
+                            class="wave"></span> I'm <img src="images/icons/name.svg"
                                 alt="Angelika Wysocka handwritten signature" class="name">.</span>
                         <br class="im-line-break">
+                        <div class="titles-container">
                         <span class="im-line-two">I'm</span> <span class="letter">a</span>
                         <span class="titles">
                             <span class="title-item">Web Developer</span>
@@ -303,9 +307,7 @@
                             <span class="title-item">Problem Solver</span>
                         </span>
                     </div>
-                    <p>I'm passionate about building modern, user-friendly websites that bring ideas
-                        to
-                        life. I'm passionate about turning ideas into websites that are both beautiful and functional.
+                    <p class="introduction-text">I'm passionate about building modern, user-friendly websites. I create digital experiences that are both beautiful and functional.
                     </p>
                     <div class="three-squares-container">
                         <div class="square">
@@ -339,26 +341,31 @@
                         me
                         grow and improve every day.
                     </p>
+                    <div class="journey-container">
                     <h3>My Journey</h3>
                     <div class="vertical-timeline">
                         <div class="timeline-item">
-                            <div class="timeline-year">2019</div>
-                            <div class="timeline-content">HND Beauty Therapy</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2021</div>
+                            <div class="timeline-year">2020 - 2021</div>
                             <div class="timeline-content">HNC Administration with Information Technology</div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-year">2024</div>
+                            <div class="timeline-year">2021</div>
+                            <div class="timeline-content">Welcomed my daughter <span class="emoji">👶‍♀️</span></div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023 - 2024</div>
                             <div class="timeline-content">HNC Digital Design and Web Development</div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-year">2025</div>
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">Welcomed my son <span class="emoji">👶‍♂️</span></div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024 - 2025</div>
                             <div class="timeline-content">HND Web Development</div>
                         </div>
                     </div>
-
+                    </div>
                 </section>
 
                 <section id="skills">
