@@ -148,7 +148,7 @@
     .journey-container {
         width: 80% !important;
     }
-    
+
     .vertical-timeline {
         width: 80%;
         margin: 0;
@@ -896,8 +896,8 @@
     }
 
     .wave {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .name {
@@ -942,6 +942,9 @@
 
 @media (max-width: 764px) {
 
+    .titles-container {
+        margin-top: -60px;
+    }
 
     .talk-button {
         position: relative;
@@ -956,7 +959,7 @@
     }
 
     .section-heading {
-        width: 90%;
+        width: 100% !important;
         font-size: 3.6rem;
         margin-left: auto;
         margin-right: auto;
@@ -968,9 +971,8 @@
     }
 
     p {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100% !important;
+        margin-left: 0 !important;
     }
 
     .introduction-text{
@@ -1286,13 +1288,75 @@
 
 @media (max-width: 708px) {
 
+    .titles-container {
+        margin-top: -5px;
+    }
+
     .section-heading {
         font-size: 3.2rem;
     }
 
     .name {
-        width: 250px;
+        width: 195px;
     }
+
+    .im-line {
+        margin-bottom: 0;
+    }
+
+    .im-line-two, .letter {
+        display: inline-block;
+        width: auto;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 1.8rem !important;
+        margin-top: 0;
+    }
+
+    .im-line-break {
+        display: none !important;
+    }
+
+    .three-squares-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .square {
+        min-width: 95px;
+        flex: 0 0 auto;
+        padding-left: 0;
+    }
+
+    .square h2 {
+        font-size: 3rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .square-label {
+        font-size: 1.1rem;
+    }
+
+    .hello-line-text {
+        font-size: 2.6rem !important;
+    }
+
+    .hello-line {
+        width: 100% !important;
+    }
+
+    .wave {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .hello-line,
+    .im-line {
+        width: 80%;
+    }
+
 
     .project-carousel-slide {
         width: 100% !important;
@@ -1522,6 +1586,11 @@
         font-size: 2.6rem;
     }
 
+    .wave {
+        width: 55px;
+        height: 55px;
+    }
+
     .name {
         width: 180px;
     }
@@ -1553,6 +1622,10 @@
 
     .section-heading {
         font-size: 2.2rem;
+    }
+
+    .titles-container {
+        margin-top: -5px;
     }
 
     .name {
@@ -1613,8 +1686,8 @@
         font-size: 1.6rem;
     }
 
-    .name {
-        width: 120px;
+    .titles-container {
+        margin-top: -5px;
     }
 
     .project-buttons-row {
@@ -1651,6 +1724,11 @@
 
     .section-heading {
         font-size: 1.3rem;
+        text-align: left !important;
+    }
+
+    .titles-container {
+        margin-top: 0;
     }
 
     .name {
@@ -1658,7 +1736,6 @@
     }
 
     .titles {
-        min-width: 100px;
         width: 100%;
     }
 
@@ -1707,7 +1784,7 @@
     }
 
     .name {
-        width: 220px;
+        width: 195px;
     }
 
     .im-line {
@@ -1749,11 +1826,22 @@
         font-size: 1rem;
     }
 
+    .hello-line-text {
+        font-size: 2.5rem !important;
+    }
+
+    .hello-line {
+        width: 100% !important;
+    }
+
+    .wave {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
     .hello-line,
     .im-line {
-        display: block;
-        width: 100%;
-        text-align: center;
+        width: 80%;
     }
 
     .iam-line {
@@ -1828,6 +1916,40 @@
         padding: 0.3rem 0.8rem;
     }
 
+    .hello-line-text {
+        font-size: 2.1rem !important;
+    }
+
+    .wave {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .name {
+        width: 130px !important;
+    }
+
+    .im-line-two, .letter  {
+        font-size: 1.4rem !important;
+    }
+
+    .title-item {
+        font-size: 1.4rem !important;
+    }
+
+    .square {
+        min-width: 80px;
+    }
+
+    .square h2 {
+        font-size: 2.5rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .square-label {
+        font-size: 0.8rem;
+    }
+
     .project-description-container {
         width: 125px !important;
     }
@@ -1867,9 +1989,17 @@
     .section-heading {
         font-size: 3.3rem;
     }
+    .hello-line-text {
+        font-size: 2rem !important;
+    }
+
+    .wave {
+        width: 45px !important;
+        height: 45px !important;
+    }
 
     .name {
-        width: 180px;
+        width: 125px !important;
     }
 
     .im-line-two, .letter  {
@@ -1881,8 +2011,22 @@
     }
 
     .square {
-        min-width: 95px;
+        min-width: 75px;
     }
+
+    .square h2 {
+        font-size: 2.4rem;
+        margin: 20px 0 10px 0;
+    }
+
+    .square-label {
+        font-size: 0.7rem;
+    }
+
+    .im-line {
+        gap: 10px;
+    }
+
 
     .skills-grid {
         grid-template-columns: repeat(1, 1fr) !important;
@@ -1971,8 +2115,17 @@
         font-size: 2.8rem;
     }
 
+    .hello-line-text {
+        font-size: 2rem !important;
+    }
+
+    .wave {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
     .name {
-        width: 180px;
+        width: 125px !important;
     }
 
     .im-line-two, .letter  {
