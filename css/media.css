@@ -958,6 +958,11 @@
         padding: 20px 0;
     }
 
+    .section-title {
+        display: flex;
+        justify-content: center;
+     }
+
     .section-heading {
         width: 100% !important;
         font-size: 3.6rem;
@@ -2084,6 +2089,29 @@
     }  
 }
 
+@media (max-width: 404px) {
+    .three-squares-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        gap: 4px !important;
+    }
+
+    .square {
+        min-width: 70px !important;
+    }
+
+    .square h2 {
+        font-size: 2.2rem !important;
+        margin: 15px 0 8px 0 !important;
+    }
+
+    .square-label {
+        font-size: 0.6rem !important;
+    }
+
+}
+
 @media (max-width: 384px) {
 
     .tick-tock-line,
@@ -2134,19 +2162,6 @@
 
     .title-item {
         font-size: 1.3rem !important;
-    }
-
-    .square {
-        min-width: 75px;
-    }
-
-    .square h2 {
-        font-size: 2.4rem;
-        margin: 20px 0 10px 0;
-    }
-
-    .square-label {
-        font-size: 0.7rem;
     }
 
     .project-overlay-grid {

@@ -220,6 +220,7 @@ body.light-mode .project-overlay-grid {
     border-radius: 15px;
 }
 
+
 .section-heading {
     font-family: 'Anton', sans-serif;
     color: #ffffff;
@@ -227,6 +228,8 @@ body.light-mode .project-overlay-grid {
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
+
+
 
 /*Home page*/
 .intro-text {
